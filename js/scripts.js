@@ -96,13 +96,11 @@ function includeHTML() {
 }
 
 const texts = [
-  "Gameplay Systems Developer",
-  "Systems Integration Engineer",
-  "Full-Stack Systems Developer",
-  "Gameplay Architect",
-  "UI Programmer",
-  "Technical Sound Designer",
-  "Audio Programmer"
+  "Full-Stack Gameplay Developer",
+  "Gameplay Systems Architect",
+  "Gameplay and UI Programmer",
+  "Technical Sound Designer and Audio Programmer",
+  "Gameplay Systems Generalist"
 ];
 let index = 0;
 
