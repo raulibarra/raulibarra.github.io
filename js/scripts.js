@@ -67,31 +67,54 @@
   
   })(jQuery); // End of use strict
 
-  function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /* Loop through a collection of all HTML elements: */
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("include-html");
-      if (file) {
-        /* Make an HTTP request using the attribute value as the file name: */
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("include-html");
-            includeHTML();
-          }
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("include-html");
+          includeHTML();
         }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /* Exit the function: */
-        return;
       }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
     }
   }
-  
+}
+
+const texts = [
+  "Gameplay Systems Developer",
+  "Systems Integration Engineer",
+  "Full-Stack Systems Developer",
+  "Gameplay Architect",
+  "UI Programmer",
+  "Technical Sound Designer",
+  "Audio Programmer"
+];
+let index = 0;
+
+function cycleText() {
+  const subtitleElement = document.getElementById('subtitle');
+  subtitleElement.style.opacity = 0; // Start fade-out
+
+  setTimeout(() => {
+    subtitleElement.textContent = texts[index];
+    subtitleElement.style.opacity = 1; // Start fade-in
+    index = (index + 1) % texts.length;
+  }, 750); // Wait for fade-out to complete
+}
+
+setInterval(cycleText, 3000); // Change text every 3 seconds
