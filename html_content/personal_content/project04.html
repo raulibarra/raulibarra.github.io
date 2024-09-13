@@ -1,20 +1,20 @@
 <div class="text-white">
     <h3>Slippery Logs (Unity | C# | PlayFab | NodeJS)</h3>
-    <h6>GaaS Infinite Jumper with remote LeaderBoards and cross-play (WebGL/Android)</h6>
+    <h6>Infinite Jumper with remote settings, leaderboard and backend persistence</h6>
     <ul>
-        <li>Core gameplay logic (jumping over logs, character energy, collectables and enemy)</li>
+        <li>Core gameplay logic (jumping over logs, character energy, collectables and enemies).</li>
         <li>Added basic player stats system to keep track of your remaining energy and score.</li>
-        <li>Integrated PlayFab to store player's data and retrieve LeaderBoards</li>
+        <li>Integrated PlayFab to store player data and retrieve leaderboards.</li>
         <ul>
-            <li>Used custom functions to increase player score based on remote parameters.</li>
-            <li>While scores are simulated locally when jumping, they are calculated and retrieved by backend after X jumps to avoid cheating.</li>
+            <li>Uses custom functions to increase player score based on remote parameters.</li>
+            <li>While scores are simulated locally during jumps, they are calculated and retrieved from the backend after X number of jumps to prevent cheating.</li>
             <li>All parameters are stored and retrieved from PlayFab</li>
             <li>Localization data is also retrieved from PlayFab.</li>
         </ul>
         <li>Created a simple but effective pooling system for logs and collectables.</li>
-        <li>Created system that spawns logs sections infinitely while advancing.</li>
-        <li>Core audio manager to play music and trigger SFXs using Unity's builtin system (It uses a pool of AudioSources for better performance).</li>
-        <li>Created and programmed all screens in the game.</li>
+        <li>Created a system that spawns log sections infinitely as you progress.</li>
+        <li>Core audio manager for playing music and triggering SFXs using Unity's built-in system (it uses a pool of audio sources for better performance).</li>
+        <li>Created and programmed all the game's screens.</li>
     </ul>
     <p>I also composed the music and designed the sound effects for the game.</p>
 
