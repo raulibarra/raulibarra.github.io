@@ -1,0 +1,29 @@
+<div class="text-white"></div>
+    <h1>Kayak VR Experience</h1>
+    <h6>Kayak VR Simulator (Unity | Google CardBoard | C#)</h6>
+    <h5>Game Developer | Utopic Studio Spa</h5>
+    <ul>
+        <li>Game development of a Kayak VR Experience, including repository setup and build deliverables.</li>
+        <li>The team was remote, so work was coordinated using a dedicated Slack workspace.</li>
+        <li>Built an <strong>infinitely scrolling map system</strong> using pre-built scenery pieces that are dynamically spawned based on the player's travelled distance.</li>
+        <ul>
+            <li>Map segments to be spawned have a weight to control how often we can spawn the same segment.</li>
+            <li>Each map segment has a spline path, which is used to move the kayak across the map terrain.</li>
+            <li>Obstacles are randomly placed over each segment using grid positioning.</li>
+            <li>A custom tool was also built to control this system.</li>
+        </ul>
+        <li>The project uses <strong>Steam Audio</strong> for <strong>binaural audio spatialisation</strong>, but additional logic was added to control the audio in-game.</li>
+        <ul>
+            <li>Each obstacle has a custom component that updates the AudioSource's priority based on its distance from the listener.</li>
+            <li>For the waterfalls, the AudioSource was set to 2D, but with dynamic volume control based on how far they were from the listener. This was done because by default 3D audio comes from a single point, but a more global sound was needed for the waterfalls.</li>
+            <li>Custom inspectors and scene_gui tools were added to better debug the dynamic behaviour of audio sources in the game.</li>
+        </ul>
+    </ul>
+   Addittionally, I also added the sound effects for this game.
+</div>
+
+<hr>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RMLKkYp8_kg?si=bqgbAg4OmYd0xUwm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<hr class="hr hr-blurry" style="border-color:aliceblue;margin-top: 25pt;" />
