@@ -1,0 +1,19 @@
+/* Style for divs */
+.toggle-div {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    margin-top: 10px;
+}
+.visible {
+    display: block; /* Show when visible */
+}
+
+.projects-link {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap's primary color */
+    transition: color 0.3s ease-in-out;
+}
+
+.projects-link:hover {
+    color: #0056b3; /* Darker blue for hover */
+}

@@ -15,6 +15,10 @@
         <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Anim CSS and Logic-->
+        <link rel="stylesheet" href="css/anims.css" />
+        <script src="js/anims.js"></script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -23,8 +27,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">FEATURED PROJECTS</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="personal_projects.html#personal_projects">PERSONAL PROJECTS</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#games-portfolio" onclick="return toggleDiv('games-portfolio');">FEATURED PROJECTS</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#personal_projects" onclick="return toggleDiv('personal_projects');">PERSONAL PROJECTS</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
                         </li>
                     </ul>
@@ -40,27 +44,8 @@
         </section>
 
         <section class="page-section bg-indigo portfolio text-white" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading mb-0 d-inline-block">Featured Game Projects</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                                
-                <div include-html="html_content/games_content/crushers_project.html"></div>
-                <div include-html="html_content/games_content/power_rangers_project.html"></div>
-                <div include-html="html_content/games_content/dc_legends_project.html"></div>
-                <div include-html="html_content/games_content/kayak_vr_project.html"></div>
-                <div include-html="html_content/games_content/bb2_project.html"></div>
-                <div include-html="html_content/games_content/sw_gd_project.html"></div>
-
-                <div class="text-center" style="padding-top:3dvh;"><h3>Check out my featured <a href="personal_projects.html#personal_projects" target="_self">personal projects</a></h3></div>
-
+            <div toggle-group="portfolio-item" id="games-portfolio" class="container toggle-div visible" include-html="html_content/games_content/_index.html"></div>
+            <div toggle-group="portfolio-item" id="personal_projects" class="container toggle-div" include-html="html_content/personal_content/_index.html"></div>
         </section>
 
         <footer class="footer text-center" id="contact">
@@ -80,7 +65,9 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
 
-        <script>includeHTML();</script> <!-- includes html elements using javaScript -->
+        <script>
+            includeHTML().then(()=>{ autoCheckForHashRedirects(); });
+        </script>
 
     </body>
 </html>

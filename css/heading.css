@@ -37,3 +37,12 @@
     opacity: 1;
     transition: opacity 0.75s ease-in-out;
 }
+
+.profile-image {
+    
+    border-radius: 5%; /* Makes the image circular */
+    border: 3px #9e9e9e33; /* Creates the frame around the image */
+    padding: 0px; /* Optional: Adds space between the image and the border */
+    border-style:groove;
+    object-fit: cover; /* Ensures the image scales properly inside the circle */
+  }

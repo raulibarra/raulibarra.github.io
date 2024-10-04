@@ -12,6 +12,7 @@
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
+          $('html, body').stop(true, false); // cancel current animation if any
           $('html, body').animate({
             scrollTop: (target.offset().top - 71)
           }, 1000, "easeInOutExpo");
@@ -68,38 +69,70 @@
   })(jQuery); // End of use strict
 
 function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
+
+  const elements = document.querySelectorAll('[include-html]');
+  const promises = [];
+
+  elements.forEach(elmnt => {
+    const file = elmnt.getAttribute('include-html');
     if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
+      const promise = fetch(file)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Page not found.');
+          }
+          return response.text();
+        })
+        .then(data => {
+          elmnt.innerHTML = data;
+          elmnt.removeAttribute('include-html');
+          // Check if new 'include-html' attributes were added after loading
+          if (elmnt.querySelector('[include-html]')) {
+            return includeHTML(); // Recursively call includeHTML for nested includes
+          }
+        })
+        .catch(error => {
+          elmnt.innerHTML = error.message;
+          elmnt.removeAttribute('include-html');
+        });
+
+      promises.push(promise);
     }
+  });
+
+  return Promise.all(promises);
+}
+
+function autoCheckForHashRedirects(){
+  
+  // Get the ID from the URL hash
+  const hash = window.location.hash.substring(1); // Remove the '#' character
+
+  console.log(`${autoCheckForHashRedirects.name}: hash: ${hash}`);
+
+  if (!hash) { return; } // don't do anything if there's no hash
+    
+  const targetElement = document.getElementById(hash);
+  if (targetElement) 
+  {
+    console.log(`${autoCheckForHashRedirects.name}: auto-scroll resolved: ${hash}. targetElement: ${targetElement.nodeName}`);
+
+    // try toggle element if not visible
+    toggleDiv(hash);
+
+    targetElement.scrollIntoView({ behavior: "smooth" });
+    return true;
   }
+
+  console.log(`${autoCheckForHashRedirects.name}: hash not found`);
+  return false;
 }
 
 const texts = [
   "Full-Stack Gameplay Developer",
   "Gameplay Systems Architect",
   "Gameplay and UI Programmer",
-  "Technical Sound Designer and Audio Programmer",
+  "Audio Programmer and Technical Sound Designer",
   "Gameplay Systems Generalist"
 ];
 let index = 0;
