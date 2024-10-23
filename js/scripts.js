@@ -129,7 +129,7 @@ function autoCheckForHashRedirects(){
 }
 
 const texts = [
-  "Full-Stack Gameplay Developer",
+  "Full-Stack Game Developer",
   "Gameplay Systems Architect",
   "Gameplay and UI Programmer",
   "Audio Programmer and Technical Sound Designer",
