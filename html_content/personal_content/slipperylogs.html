@@ -1,26 +1,51 @@
 <div class="text-white">
-    <h3>Slippery Logs (Unity | C# | PlayFab | NodeJS)</h3>
-    <h6>Infinite Jumper with remote settings, leaderboard and backend persistence</h6>
-    <ul style="text-align: justify;">
-        <li>Core gameplay logic (jumping over logs, character energy, collectables and enemies).</li>
-        <li>Added basic player stats system to keep track of your remaining energy and score.</li>
-        <li>Integrated PlayFab to store player data and retrieve leaderboards.</li>
-        <ul>
-            <li>Uses custom functions to increase player score based on remote parameters.</li>
-            <li>While scores are simulated locally during jumps, they are calculated and retrieved from the backend after X number of jumps to prevent cheating.</li>
-            <li>All parameters are stored and retrieved from PlayFab</li>
-            <li>Localization data is also retrieved from PlayFab.</li>
-        </ul>
-        <li>Created a simple but effective pooling system for logs and collectables.</li>
-        <li>Created a system that spawns log sections infinitely as you progress.</li>
-        <li>Core audio manager for playing music and triggering SFXs using Unity's built-in system (it uses a pool of audio sources for better performance).</li>
-        <li>Created and programmed all the game's screens.</li>
-    </ul>
-    <p style="text-align: justify;">I also composed the music and designed the sound effects for the game.</p>
-
-    <div>
-        <iframe frameborder="0" src="https://itch.io/embed/482032?dark=true" width="100%"><a href="https://gamingsoft.itch.io/slippery-logs">Slippery Logs</a></iframe>
+<div class="text-white">
+    <!-- Header section - full width -->
+    <div class="row">
+        <div class="col-12">
+            <h3>Slippery Logs</h3>
+            <h6>Backend-Integrated Infinite Jumper with Anti-Cheat Systems</h6>
+        </div>
     </div>
+    
+    <!-- Main content - two columns -->
+    <div class="row">
+        <!-- Left column: Project details -->
+        <div class="col-md-6">
+            <div style="background-color: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; margin: 10px 0;">
+                <strong>Focus:</strong> Backend Integration & Security<br>
+                <strong>Tech:</strong> Unity, C#, PlayFab, Node.js
+            </div>
+            
+            <h5>What I Built:</h5>
+            <ul style="text-align: justify;">
+                <li><strong>Secure Backend Architecture:</strong> Integrated PlayFab with custom cloud functions for anti-cheat score validation, ensuring authentic leaderboard data through server-side verification after every set number of jumps.</li>
+                <li><strong>Infinite Procedural Generation:</strong> Developed scalable log spawning systems with object pooling for collectibles and obstacles, maintaining smooth performance during extended gameplay sessions.</li>
+                <li><strong>Dynamic Remote Configuration:</strong> Implemented PlayFab-driven remote parameters for difficulty tuning, score multipliers, and localization data, allowing real-time game balance adjustments without updates.</li>
+                <li><strong>Complete UI/UX Systems:</strong> Designed and programmed all game screens with integrated leaderboards, player progression tracking, and responsive energy management systems.</li>
+            </ul>
+            
+            <p style="text-align: justify; font-style: italic; color: #bbb;">
+                Features original soundtrack and sound design with optimized audio management for enhanced player experience.
+            </p>
+        </div>
+        
+        <!-- Right column: Itch.io embed -->
+        <div class="col-md-6">
+            <div style="background-color: rgba(138,43,226,0.1); padding: 8px; border-radius: 5px; border-left: 3px solid #8A2BE2; margin-bottom: 15px;">
+                <strong>Skills Demonstrated:</strong> Backend services integration, anti-cheat implementation, cloud functions development, and full-stack game architecture.
+            </div>
+            
+            <h5>🎮 Play Now</h5>
+            <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.3); margin-bottom: 15px;">
+                <iframe width="100%" height="300" frameborder="0" src="https://itch.io/embed/482032?dark=true"><a href="https://gamingsoft.itch.io/slippery-logs">Slippery Logs</a></iframe>
+            </div>
+            <p style="text-align: justify; color: #ccc;">
+                Endless jumping action with global leaderboards and real-time competition. Your scores are validated server-side for fair play across all players worldwide.
+            </p>
+        </div>
+    </div>
+</div>
 </div>
 
 <hr>
