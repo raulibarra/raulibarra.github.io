@@ -148,4 +148,9 @@ function cycleText() {
   }, 750); // Wait for fade-out to complete
 }
 
-setInterval(cycleText, 3000); // Change text every 3 seconds
+function startCycleText() {
+  // Call it once immediately to show the first text
+  cycleText();
+  // Then set up the interval
+  setInterval(cycleText, 3000); // Change text every 3 seconds
+}
