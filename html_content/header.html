@@ -1,6 +1,69 @@
-<!-- align image to the center -->
-<div style="height: 80px;"></div>
-<div style="position: relative; text-align: center;">
-    <img src="assets/img/gamedev_banner-280.png" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;" alt="site banner" />
-    <div id="subtitle" class="header-subtitle" >Gameplay Programmer (Generalist)</div>
+<!-- Hero Section (Parallax) -->
+<div class="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden">
+
+    <!-- Layer 0: Deep Background (The Cave/Ruins) -->
+    <div class="parallax-layer position-absolute w-100 h-100" data-speed="-1">
+        <div class="hero-bg-atmosphere"></div>
+    </div>
+
+    <!-- FX Layer: Film Grain & Noise (Static Overlay) -->
+    <div class="position-absolute w-100 h-100 hero-noise-overlay">
+        <svg viewBox="0 0 200 200" xmlns='http://www.w3.org/2000/svg'>
+            <filter id='noiseFilter'>
+                <feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch' />
+            </filter>
+            <rect width='100%' height='100%' filter='url(#noiseFilter)' />
+        </svg>
+    </div>
+
+    <!-- Layer 1: Global Lighting (God Rays) -->
+    <div class="parallax-layer position-absolute w-100 h-100" data-speed="2">
+        <div class="light-beam beam-1"></div>
+        <div class="light-beam beam-2"></div>
+        <div class="light-beam beam-3"></div>
+    </div>
+
+    <!-- Layer 2: Floating Particles (Dust Motes) -->
+    <div class="parallax-layer position-absolute w-100 h-100" data-speed="4">
+        <div class="dust-mote mote-1"></div>
+        <div class="dust-mote mote-2"></div>
+        <div class="dust-mote mote-3"></div>
+        <div class="dust-mote mote-4"></div>
+    </div>
+
+    <!-- FX Layer: Cinematic Vignette (Static Overlay) -->
+    <div class="position-absolute w-100 h-100 hero-vignette"></div>
+
+    <!-- Layer 3: Main Content (Foreground - STATIC as requested) -->
+    <div class="parallax-layer text-center position-relative z-index-10" data-speed="0">
+        <h1 class="hero-title mb-4">RAUL IBARRA ARANDA</h1>
+
+        <div class="hero-subtitle-container mb-4">
+            <span class="hero-subtitle text-accent font-code">&lt;Gameplay Programmer /&gt;</span>
+            <span class="hero-subtitle text-muted mx-2">|</span>
+            <span class="hero-subtitle text-white">Full-Stack Developer</span>
+            <span class="hero-subtitle text-muted mx-2">|</span>
+            <span class="hero-subtitle text-accent font-code">AI Specialist</span>
+        </div>
+
+        <h3 class="text-white mb-5 font-weight-light">
+            Engineering <span class="text-accent">Immersive Gameplay</span> & <span class="text-accent">Scalable
+                Systems</span>
+        </h3>
+
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+            <a href="#games-portfolio"
+                class="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger">
+                VIEW PROJECTS
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="position-absolute w-100 text-center z-index-10" style="bottom: 30px;">
+        <a href="#games-portfolio" class="text-white js-scroll-trigger scroll-indicator-link">
+            <div class="scroll-indicator"></div>
+            <div class="small mt-2 font-code text-muted">SCROLL</div>
+        </a>
+    </div>
 </div>

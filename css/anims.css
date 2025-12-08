@@ -1,7 +1,7 @@
 /* Style for divs */
 .toggle-div {
     display: none; /* Initially hidden */
-    padding: 20px;
+    padding: 10px;
     margin-top: 10px;
 }
 .visible {

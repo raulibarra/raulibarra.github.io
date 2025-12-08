@@ -1,49 +1,62 @@
-<div class="text-white">
-    <!-- Header section - full width -->
-    <div class="row">
-        <div class="col-12">
-            <h3>Asteroids New Hope</h3>
-            <h6>Enhanced Asteroids with D.O.T.S. Performance System</h6>
+<div class="project-card">
+    <div class="row mb-4 align-items-end">
+        <div class="col-md-6">
+            <h2 class="text-accent mb-1">Asteroids New Hope</h2>
+            <h6 class="text-white-50">Enhanced Asteroids with D.O.T.S. Performance System</h6>
+        </div>
+        <div class="col-md-6 d-none d-md-flex justify-content-end">
+            <h5 class="text-accent mb-0">🎮 Playable Demo</h5>
         </div>
     </div>
-    
-    <!-- Main content - two columns -->
+
     <div class="row">
-        <!-- Left column: Project details -->
-        <div class="col-md-6">
-            <div style="background-color: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; margin: 10px 0;">
-                <strong>Focus:</strong> Performance Optimization & D.O.T.S.<br>
-                <strong>Tech:</strong> Unity, C#, D.O.T.S., ECS
+        <!-- Left column: Details -->
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="info-panel variant-surface mb-4">
+                <div class="mb-2"><strong>Focus:</strong> <span class="text-white">Performance Optimization &
+                        D.O.T.S.</span></div>
+                <div class="mb-2"><strong>Tech:</strong></div>
+                <div>
+                    <span class="tech-badge">Unity</span>
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">D.O.T.S.</span>
+                    <span class="tech-badge">ECS</span>
+                </div>
             </div>
-            
-            <h5>What I Built:</h5>
-            <ul style="text-align: justify;">
-                <li><strong>High-Performance D.O.T.S. System:</strong> Implemented Unity's Data-Oriented Technology Stack for asteroid and projectile movement, achieving optimal performance with hundreds of entities.</li>
-                <li><strong>Dynamic Weapon Upgrades:</strong> Created a progression system with randomized weapon enhancements from UFO destruction, including fire rate boosts and multi-shot capabilities.</li>
-                <li><strong>Optimized Audio Management:</strong> Built a pooled audio system for efficient SFX playback and composed original music with responsive audio triggers for game events.</li>
-                <li><strong>Smart Object Pooling:</strong> Implemented Unity's object pooling for bullets and effects, significantly reducing garbage collection and maintaining smooth performance.</li>
+
+            <h5 class="text-accent mb-3">Key Features</h5>
+            <ul class="text-muted pl-3">
+                <li class="mb-2"><strong>High-Performance D.O.T.S.:</strong> Implemented Unity's Data-Oriented
+                    Technology Stack for optimal performance with hundreds of entities.</li>
+                <li class="mb-2"><strong>Dynamic Upgrades:</strong> Created a progression system with randomized weapon
+                    enhancements from UFO destruction.</li>
+                <li class="mb-2"><strong>Optimized Audio:</strong> Built a pooled audio system for efficient SFX
+                    playback and composed original music.</li>
+                <li class="mb-2"><strong>Smart Object Pooling:</strong> Implemented object pooling for bullets and
+                    effects to reduce garbage collection.</li>
             </ul>
-            
-            <p style="text-align: justify; font-style: italic; color: #bbb;">
-                Composed original soundtrack and designed immersive sound effects to enhance the classic arcade experience.
-            </p>
         </div>
-        
-        <!-- Right column: Itch.io embed -->
+
+        <!-- Right column: Embed -->
         <div class="col-md-6">
-            <div style="background-color: rgba(138,43,226,0.1); padding: 8px; border-radius: 5px; border-left: 3px solid #8A2BE2; margin-bottom: 15px;">
-                <strong>Skills Demonstrated:</strong> Advanced Unity optimization, D.O.T.S./ECS architecture, performance profiling, and scalable system design.
+            <h5 class="text-accent mb-3 d-md-none">🎮 Playable Demo</h5>
+
+            <div class="mb-3 embed-container">
+                <iframe width="100%" height="167px" frameborder="0" src="https://itch.io/embed/1392077?dark=true"
+                    title="Asteroids New Hope Demo" loading="lazy"><a
+                        href="https://gamingsoft.itch.io/asteroids-game-demo">Asteroids Game Demo</a></iframe>
             </div>
-            
-            <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.3); margin-bottom: 15px;">
-                <iframe width="100%" height="300" frameborder="0" src="https://itch.io/embed/1392077?dark=true"><a href="https://gamingsoft.itch.io/asteroids-game-demo">Asteroids Game Demo by Gamingsoft</a></iframe>
+
+            <div class="mt-3 text-muted small mb-3">
+                Classic space shooter with modern enhancements. Collect weapon upgrades and experience smooth
+                performance with hundreds of asteroids.
             </div>
-            <p style="text-align: justify; color: #ccc;">
-                Classic space shooter with modern enhancements. Collect weapon upgrades from UFOs and experience smooth performance even with hundreds of asteroids on screen.
-            </p>
+
+            <div class="info-panel variant-primary">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <strong>Skills Demonstrated:</strong> Advanced Unity optimization, D.O.T.S./ECS architecture,
+                performance profiling, and scalable system design.
+            </div>
         </div>
     </div>
 </div>
-
-<hr>
-<hr class="hr hr-blurry" style="border-color:aliceblue;margin-top: 25pt;" />
