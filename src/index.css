@@ -39,6 +39,8 @@ body {
   background-color: var(--bg-void);
   color: var(--text-primary);
   font-family: var(--font-body);
+  /* Custom Cursor */
+  cursor: url('/cursor-default.svg') 16 16, auto;
 }
 
 h1,
@@ -63,6 +65,11 @@ h6,
 a {
   color: var(--accent-cyan);
   transition: color 0.2s ease, text-shadow 0.2s ease;
+  cursor: url('/cursor-pointer.svg') 16 16, pointer;
+}
+
+button, .btn, .nav-link, .js-scroll-trigger {
+  cursor: url('/cursor-pointer.svg') 16 16, pointer !important;
 }
 
 a:hover {
