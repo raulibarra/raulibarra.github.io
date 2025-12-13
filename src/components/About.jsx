@@ -6,32 +6,47 @@ const About = () => {
             {/* About Section Content */}
             <div className="row">
                 {/* Profile Column */}
-                <div className="col-lg-4 ml-auto text-center text-lg-left">
-                    <div className="profile-image-container mb-4">
-                        <img className="img-fluid profile-image" src="assets/img/FotoPromoRaul.JPG" alt="Raul Ibarra Aranda" />
-                    </div>
+                {/* Profile Column */}
+                <div className="col-lg-4 ml-auto text-center text-lg-left" style={{ position: 'sticky', top: '100px', height: 'fit-content', zIndex: 100 }}>
+                    <div className="info-panel variant-surface p-4 text-center text-lg-left">
+                        <div className="profile-image-container mb-4 d-inline-block position-relative">
+                            <img className="img-fluid profile-image mb-2" src="assets/img/FotoPromoRaul.JPG" alt="Raul Ibarra Aranda" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+                            <div className="status-badge text-accent font-code small mt-2">
+                                <span className="mr-2">●</span>Open to Work
+                            </div>
+                        </div>
 
-                    <div className="contact-info pl-2">
-                        <h5 className="text-white mb-3 font-code">&gt; Contact.init()</h5>
+                        <div className="profile-header mb-4">
+                            <h2 className="h4 text-white mb-1">Raul Ibarra Aranda</h2>
+                            <p className="text-accent font-code mb-0">Game Developer</p>
+                        </div>
 
-                        <a className="contact-link" href="mailto:raulibarra.a@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-solid fa-envelope"></i>raulibarra.a@gmail.com
-                        </a>
-                        <a className="contact-link" href="https://www.linkedin.com/in/raulxibarra" target="_blank"
-                            rel="noopener noreferrer">
-                            <i className="fa-brands fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a className="contact-link" href="https://gamingsoft.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-brands fa-itch-io"></i> Personal projects
-                        </a>
-                        <a className="contact-link" href="https://raulibarra.github.io/audio" target="_blank"
-                            rel="noopener noreferrer">
-                            <i className="bi bi-volume-up"></i> Audio Portfolio
-                        </a>
-                        <a className="contact-link" href="https://raulibarra.github.io/music" target="_blank"
-                            rel="noopener noreferrer">
-                            <i className="bi bi-music-note"></i> Music Portfolio
-                        </a>
+                        <div className="contact-info">
+                            <h5 className="text-white mb-3 font-code text-left small opacity-75">&gt; Contact.init()</h5>
+
+                            <div className="d-flex flex-column">
+                                <a className="btn btn-outline-cyan btn-sm text-left mb-2 d-flex align-items-center" href="mailto:raulibarra.a@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <i className="fa-solid fa-envelope mr-3" style={{ width: '20px', textAlign: 'center' }}></i>
+                                    <span>raulibarra.a@gmail.com</span>
+                                </a>
+                                <a className="btn btn-outline-cyan btn-sm text-left mb-2 d-flex align-items-center" href="https://www.linkedin.com/in/raulxibarra" target="_blank" rel="noopener noreferrer">
+                                    <i className="fa-brands fa-linkedin mr-3" style={{ width: '20px', textAlign: 'center' }}></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a className="btn btn-outline-cyan btn-sm text-left mb-2 d-flex align-items-center" href="https://gamingsoft.itch.io/" target="_blank" rel="noopener noreferrer">
+                                    <i className="fa-brands fa-itch-io mr-3" style={{ width: '20px', textAlign: 'center' }}></i>
+                                    <span>Personal projects</span>
+                                </a>
+                                <a className="btn btn-outline-cyan btn-sm text-left mb-2 d-flex align-items-center" href="https://raulibarra.github.io/audio" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-volume-up mr-3" style={{ width: '20px', textAlign: 'center' }}></i>
+                                    <span>Audio Portfolio</span>
+                                </a>
+                                <a className="btn btn-outline-cyan btn-sm text-left d-flex align-items-center" href="https://raulibarra.github.io/music" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-music-note mr-3" style={{ width: '20px', textAlign: 'center' }}></i>
+                                    <span>Music Portfolio</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

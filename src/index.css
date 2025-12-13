@@ -593,3 +593,38 @@ a:hover {
   text-shadow: 0 0 2px rgba(102, 252, 241, 0.5);
   text-decoration-color: var(--accent-cyan);
 }
+
+/* Status Pulse Animation */
+.status-badge span {
+  color: #00ff88;
+  /* Bright Green */
+  display: inline-block;
+  text-shadow: 0 0 5px #00ff88;
+  animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ensure sticky works well on mobile (reset) */
+@media (max-width: 991px) {
+  .col-lg-4[style*="sticky"] {
+    position: static !important;
+    margin-bottom: 2rem;
+  }
+}
