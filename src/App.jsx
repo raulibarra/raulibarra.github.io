@@ -4,6 +4,8 @@ import Header from './components/Header';
 import About from './components/About';
 import ProjectsList from './components/ProjectsList';
 import Footer from './components/Footer';
+import NMadCompanion from './components/NMadCompanion';
+import ChatInterface from './components/ChatInterface';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
   // Navbar Shrink Logic
   const [navbarShrink, setNavbarShrink] = useState(false);
   const [activeCanvas, setActiveCanvas] = useState('featured'); // 'featured' or 'personal'
+  const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
     const navbarCollapse = () => {
@@ -62,13 +65,24 @@ function App() {
 
   return (
     <div id="page-top">
+      {/* NMad AI Companion */}
+      <NMadCompanion onToggleChat={() => setChatOpen(!chatOpen)} />
+      <ChatInterface isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+
       {/* Navigation */}
       <nav className={`navbar navbar-expand-lg bg-secondary fixed-top ${navbarShrink ? 'navbar-shrink' : ''}`} id="mainNav">
         <div className="container">
           <a className="navbar-brand js-scroll-trigger" href="#page-top">Game Dev Portfolio</a>
-          <button className="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
-            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            className="navbar-toggler font-weight-bold text-white rounded"
+            style={{ borderColor: 'var(--accent-cyan)', background: 'transparent' }}
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             Menu <i className="fas fa-bars"></i>
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -137,7 +151,7 @@ function App() {
           <i className="fa fa-chevron-up"></i>
         </a>
       </div>
-    </div>
+    </div >
   )
 }
 

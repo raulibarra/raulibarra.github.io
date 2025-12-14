@@ -71,7 +71,9 @@ const ProjectCard = ({ project, layout }) => {
                                 frameBorder="0"
                                 src={project.embedSrc}
                                 title={project.title}
-                                loading="lazy">
+                                loading="lazy"
+                                sandbox="allow-scripts allow-same-origin allow-popups allow-pointer-lock allow-forms"
+                            >
                                 {project.embedLinkText && <a href={project.embedLinkUrl}>{project.embedLinkText}</a>}
                             </iframe>
                         </div>

@@ -1,0 +1,654 @@
+Name: Raul Ibarra Aranda
+Senior Game Developer | Gameplay Programmer | UI Programmer | Systems Designer | Technical Sound Designer | Audio Programmer
+raulibarra.a@gmail.com | raulibarra.github.io | www.linkedin.com/in/raulxibarra | https://wa.link/zawmli
+Location: Pucón, Chile (GMT-3). I'm able to work in different timezones remotely from GMT -8 to GMT +2. Open to relocation and working hybrid or on-site.
+
+Summary
+ 🎮 I build gameplay features that sound great!
+
+I’m a Technical Sound Designer & Gameplay Engineer with 10+ years and 25+ shipped titles across mobile, PC, and VR. I design, prototype, and ship audio-driven mechanics: systems where audio is not just feedback but game logic (adaptive music/state machines, audio-triggered gameplay events, and spatial/immersive audio that changes gameplay behavior).
+
+Technical highlights:
+* Middleware & engines: Wwise, FMOD, Unity (C#), Unreal (Metasounds/BluePrints), and experience integrating audio into large production pipelines.
+* Tooling & automation: Wwise File Packager + Addressables/AssetBundles for CI pipelines, editor tools for designers, and automated soundbank workflows.
+* Audio craft: field recording/foley, SFX, adaptive music, Dolby Atmos/spatial audio, DAWs (Reaper / Pro Tools / Nuendo).
+* Systems & code: C#, C++, Python, build audio managers, low-latency streaming, and gameplay hooks that let audio control or augment mechanics.
+
+🚀 What I bring: I prototype features end-to-end (gameplay + audio), ship performant interactive audio systems, and speak both languages, audio and gameplay engineering, so teams iterate faster and deliver higher fidelity interactions. Open to senior Technical Sound Designer / Audio Programmer / Gameplay Engineer roles focusing on AA/AAA titles where audio and mechanics are tightly coupled.
+
+Check out some of my recent projects and demos:
+* Gameplay Prototype – Unity Multiplayer: https://gamingsoft.itch.io/spooky-arena
+* Wwise Audio Demo: https://gamingsoft.itch.io/echoes-of-the-forgotten-isle
+* VR Experience: https://youtu.be/RMLKkYp8_kg
+* Starred projects (code): https://gitlab.com/users/gamingsoft/starred
+
+🚀 Let’s Connect!
+📨 Email: raulibarra.a@gmail.com
+💬 Discord: _nmad
+
+Skills: Unity | Unreal Engine
+C# | C++ | NodeJs | Python
+MongoDB | Redis | MySQL | SQL Server, Postgres
+Procedural Generation
+Gameplay Programming 
+AI | Animations Programming 
+Backend Programming 
+Client-Server Architecture 
+Shaders | UI Programming 
+Tools Programming 
+Multiplayer Networking 
+Photon Quantum 
+Cross-Platform Development 
+Profiling & Optimization
+Version Control (Git, P4, SVN) 
+D.O.T.S. | ECS
+AssetBundles | Addressables 
+Unit Testing
+Assets Optimization
+Algorithms | Design Patterns | 3D mathematics
+Jira | Confluence | Trello | Asana
+Github Actions | Jenkins Jobs
+SOLID Principles
+Dependency Injection
+Music Composition | Sound Design
+Music Theory | Orchestration
+Foley | Field Recording
+Audio Editing | Mixing / Mastering
+Audio Programming
+MetaSounds | Dolby Atmos
+Digital Audio Workstations (Cubase, ProTools, Reaper)
+Interactive Audio Design
+Audio Middlewares (Wwise, FMOD)
+Surround | Binaural Sound Mixing
+Spatial | Binaural Audio
+Audio Integration
+Agile, Scrum, Lean Production, Middleware-Driven Development, Procedural Audio, CI/CD, Waterfall, Agile,Scrum,Test-Driven Development (TDD),Continuous Integration (CI) / Continuous Delivery (CD)
+Collaboration, Communication, Mentoring, Design Thinking, Cross-Functional Collaboration, Problem-Solving, Team Collaboration,Problem-Solving,Creative Thinking,Adaptability,Critical Thinking,Teamwork,Attention to Detail
+
+Work Experience: 
+Senior Unity Developer | Technical Lead
+Series AI
+From 01/2025 to 09/2025
+* Led full-stack development as sole engineer and Tech Lead on two shipped titles, in a 4 members pod (product, design, art, and QA) to deliver stable, feature-rich releases.
+* Developed core systems for a 2D interactive fiction game for Netflix, including dynamic chat UI and Ink-based narrative integration.
+* Architected and prototyped three AI-driven game concepts in Unity and HTML5, focusing on gameplay systems, rapid iteration, and scalable pipelines, integrating AI-generated dialogue (OpenAI/Claude) and visuals (Flux/Playground, OpenAI) for real-time player interactions to enhance immersion and replayability.
+* Successfully prototyped a tactical RPG in one week, leveraging AI agent modes (Cursor, Copilot) with advanced LLMs (Gemini, Claude, ChatGPT) and Unity MCP for rapid development of generative content and game backend systems.
+* Designed an event-driven tutorial system with adaptive content based on player progression and choices made.
+* Integrated AI-generated dialogue and visuals for real-time interactions, enhancing immersion and replayability.
+* Leveraged full-stack experience (Node.js) to design and prototype server-side logic for persisting AI interactions for dynamic branching story lines, where consequences are reflected to next interactions.
+* Improved asset management of 3 games using Unity Addressables,  enabling live content delivery for more than 700 unique assets.
+* Implemented spreadsheet-based game configuration and game economy data, allowing real-time tuning and empowering designers across 3 titles.
+* Mentored team on Unity workflows, promoting CI-friendly development and faster prototyping.
+* Created and implemented 10+ screens using UIToolkit and uGUI, with easy to modify components for technical artists, ensuring smooth collaboration and polished UI/UX.
+* Contributed to cross-functional design meetings, resolving blockers and proposing scalable technical solutions.
+* Implemented gameplay mechanics A/B testing for a shipped game, to decide which one was the best one, based on how many players completed levels using each gameplay type.
+* Utilized advanced AI coding assistants (e.g., Cursor, GitHub Copilot, Gemini, Claude) daily for code acceleration, agentic coding, debugging, and generating technical documentation, significantly improving development velocity.
+
+Skills: Unity, C#, JavaScript, Python, Ink, NodeJS, AI Programming, LLMs (ChatGPT, Gemini, Claude, Grok)
+Soft Skills: Team Collaboration,Problem-Solving,Creative Thinking,Attention to Detail,Critical Thinking,Effective Communication,Adaptablity,Time Management.
+Methodologies: Agile,Scrum, Continuos Integration (CI) / Continous Delivery (CD)
+
+
+Gameplay Unity Programmer | Technical Sound Designer
+Tomorrow Media
+From 11/2024 to 04/2025
+* Created a data-driven weapons system with support for fire rate, burst and ammo control in a multiplayer environment, supporting +10 kinds of weapons.
+* Developed real-time analytics systems to track and display match statistics like score, kills, powerups used and end game stats like MVP player, and 1st to 3rd place extra bonus score and experience calculations.
+* Optimized memory footprint and loading times by preloading gameplay assets like proyectile VFXs and sound effects, and the use of object pooling, reducing framedrops by 75%.
+* Developed an effective car engine audio system, that mimics multiple revs using a single audio source and pitch changes across multiple curves to simulate gears switching.
+* Programmed an audio manager that supports having multiple variations per sfx, pitch and volume randomness and remote loading using addressables.
+* Designed sound effects for 10+ vehicle weapons (futuristic and magical ones) and environment interactions 10+ (objects destruction and explosions).
+* Applied audio compression techniques to ensure minimal loading times for SFXs, without significant quality loss, getting faster loading times for WebGL deployment.
+* Engineered a music playlist system that can be used to play/shuffle tracks players can listen while in the main menu and the game.
+
+Skills: Unity,Photon Quantum,C#,Git,Cubase
+Soft Skills: Team Collaboration,Problem-Solving,Creative Thinking,Attention to Detail,Critical Thinking,Effective Communication,Adaptablity,Time Management.
+Methodologies: Agile,Scrum
+
+
+Audio Programmer | Technical Sound Designer | Senior Unity Developer | Unreal Developer
+Somatone Interactive
+From 09/2018 to Present
+* Led the creation of a sample game for Dolby Atmos, showcasing Dolby Atmos for Mobile using Unity, Wwise, and the Dolby Atmos for Wwise plugin. Managed sound design, audio programming, UI programming, and gameplay programming. Now featured on Dolby’s website as part of their official sample game collection.
+* Designed 30+ high-quality SFX for mobile and VR games, leveraging Agile methodologies to ensure on-time delivery aligned with milestones.
+* Integrated adaptive spatial audio (Dolby Atmos, Google Resonance) in two titles, enhancing 3D audio immersion through middleware-driven techniques.
+* Developed audio managers and pipelines with FMOD, Wwise, and C# for smooth cross-platform playback and optimized performance.
+* Automated audio asset delivery pipelines with Wwise File Packager, Addressables, and AssetBundles, reducing manual workload by 70% and accelerating CI workflows.
+* Built interactive audio systems (Metasounds, SoundCues) in Unreal Engine, enabling real-time soundscapes responsive to player actions.
+* Collaborated with cross-disciplinary teams (20+ members) to align audio with gameplay mechanics, ensuring tightly synced player feedback.
+* Managed audio codebases using Git and Perforce, participating in code reviews to maintain quality and improve version control.
+* Explored procedural audio technologies, leveraging emerging tools and synthesis techniques to create dynamic soundscapes.
+* Applied audio debugging techniques like voices profiling, messages log and memory profiling to ensure optimized audio playback for mobile (iOS & Android)
+* Utilized custom compression settings for optimized audio playback, making sure there's no significant quality loss while getting 30%+ less memory/disk usage.
+
+Skills: Unity,Unreal Engine,C#,C++,Metasounds,SoundCues,FMOD,Wwise,Dolby Atmos,Google Resonance,Python,Git,Perforce,ProTools,Cubase,Reaper,Ableton Live,Sibelius,Dorico
+Soft Skills: Design Thinking, Cross-Functional Collaboration, Problem-Solving
+Methodologies: Agile, Scrum, Lean Production, Middleware-Driven Development, Procedural Audio, CI/CD, Waterfall
+
+
+Gameplay Programmer | UI Programmer,Systems Developer| Senior Unity Developer | Music Composer | Technical Sound Designer | Audio Programmer
+Redemption Games Inc.
+From 03/2023 to 08/2024
+UI Programming | Gameplay Programming | Systems Development
+* Engaged in the development of live-operated F2P games, applying Game as a Service (GaaS) methodologies to enhance user retention and facilitate timely content updates.
+* Developed gameplay features (Trophy Road, Events) with optimized data structures for game data management, partnered with Product and Design teams.
+* Designed and implemented the complete UI flow for the 'Trophy Road' feature, including displaying player score/avatar, current ladder progression, and reward claiming mechanics.
+* Partnered with Design teams and Technical Artists to create fully aligned and polished features (Trophy Road, Scheduled event screens and Tutorial interactions).
+* Constructed custom reusable components and editor tools for UI and design teams, for quick feature development, reducing iteration times by 30%.
+* Designed playable prototypes, decreasing design iteration time by 50% and fostering iterative feedback.
+* Implemented and programmed 10+ screens using uGUI, with smooth animations using DoTween and Unity Timelines.
+* Built a dynamic UI system using Unity and Addressables to load screens and popups on-demand, reducing memory usage by loading only when needed.
+* Established tracking methods using Firebase for precise monitoring of player interactions.
+* Streamlined code efficiency by consolidating libraries into reusable package dependencies, reducing project load times by 30%.
+* Collaborated with technical artists for final UI polish, and gameplay particle VFXs, ensuring optimal integration and performance for 15+ different gameplay animations.
+* Implemented a data-driven, event-driven tutorial system with hot-reloading, decreasing iteration times by around 70%.
+* Created technical documentation for the Tutorial System, outlining user flow and component interactions to assist developers in system integration.
+* Developed an AssetsManager system for asynchronous asset retrieval using async/await, reducing asset integration time by 20% with cleaner, maintainable code.
+* Built 3+ build pipelines for remote content delivery, continuous integration and events scheduling via Github Actions, improving feature testing by 50%.
+* Authored integration tests for client/server features, validating data structures, achieving >90% coverage of critical endpoints.
+* Integrated localization systems and contributed to English/Spanish localization, aiding a successful game release.
+* Integrated object pooling, which reduced frame drops and improved game overall stability by around 30%.
+* Facilitated communication between engineering, design, technical art and QA teams to resolve gameplay and performance issues, on a team of 20+ members.
+* Designed and implemented a spreadsheet-based game config and game economy data structure, to let game designers easily add new content and store products live
+
+Audio Programming | Technical Sound Design | Music
+* Developed a robust audio system in Unity/C#, supporting 2 layered tracks and adaptive audio ducking for 30+ SFXs.
+* Implemented SFX for 5+ abilities and 10+ UI interactions, enhancing player experience.
+* Ensured optimized audio playback by adjusting audio compression settings, applying object pooling for clips and voice limiting, reducing framedrops by 50% while keeping a low memory footprint.
+* Composed original orchestral music for prototype game core loop (Home, Battle, Victory/Defeat), helping shape the game’s auditory identity.
+
+Skills: Unity,C#,Firebase,Firestore,Crashlytics,Build Pipelines,Python,Node.JS,Github Actions,UPM,Git
+Soft Skills: Team Collaboration,Problem-Solving,Creative Thinking,Attention to Detail,Critical Thinking,Effective Communication,Adaptablity,Time Management.
+Methodologies: Agile,Scrum,Test-Driven Development (TDD),Continuous Integration (CI) / Continuous Delivery (CD)
+
+
+Senior Unity Developer | Full-Stack & Gameplay Programmer | Audio Programmer | Technical Sound Designer
+Globant
+From 01/2022 to 03/2023
+Worked on 3 games including:
+* Power Rangers Morphin Legends (Turn-based RPG) (Nway)
+
+Game Programming:
+* Developed 3 mobile Free to Play games (iOS & Android) in Unity, focusing on engaging gameplay mechanics.
+* Collaborated with cross-functional teams of 10+ members, including product, design, UI, Art and QA, participating actively in scrum meetings, code reviews and design meetings.
+* Partnered with Technical Artists to integrate VFXs and SFXs to character animations, using Unity Timeline sequencer to trigger character abilities.
+* Crafted immersive RPG mechanics by programming 20+ skills to enrich gameplay.
+* Revamped a skills system with modular design, single responsibility principles, and dependency injection, ensuring unit testability and reducing debugging time by 50%.
+* Created a uGUI based UI management system using Addressables to load screens on demand, cutting memory usage by an estimated 20-30% and reducing UI iteration times.
+* Authored technical documents for 5+ features, outlining architecture, user flow, and suggested initial implementation.
+* Implemented data-driven and event-driven tutorial systems for 2 titles, easing debugging and live content updates.
+* Led a 4 members team on a WebGL multiplayer game, architecting localization and skill systems while ensuring unit testability, achieving ~90%+ task completion across all sprints.
+* Authored 5+ Unity Editors to streamline workflows for art, design, audio, and programming teams.
+* Utilized async/await to streamline network calls, enhancing code readability and reducing callback complexity for cleaner, more maintainable code.
+* Collaborated with designers, technical artists, and QA teams to identify issues early, producing technical documentation for upcoming features.
+* Identified performance bottlenecks and garbage collection issues using Unity's profiler and memory profiler, fixing the top 3 during early development.
+* Helped implement a skills animation system using Unity Timeline, that supported sequencing animations with VFXs (instantiated via prefabs) and audio SFXs, to help creating 60+ stunning character ability animations for 20+ chararacters.
+
+Audio Programming | Technical Sound Design | Music
+* Led core audio system creation for 2 games, implementing a context-based SFX system to enhance player engagement.
+* Designed prototype SFX for 5 character attacks, skills, and hit reactions.
+* Composed and integrated 4 original music tracks, ensuring alignment of audio design with thematic and gameplay elements.
+* Collaborated with game designers, VFX artists, and animators to ensure a cohesive audio-visual experience.
+
+Skills: Unity,C#,Python,NodeJS,Build Pipelines,Cubase
+Soft Skills: Team Collaboration,Problem-Solving,Creative Thinking,Adaptability,Critical Thinking,Teamwork,Attention to Detail
+Methodologies: Agile methodologies,SCRUM,collaborative development,Test-Driven Development,CI/CD
+
+
+Founder | Technical Music Composer & Sound Designer | Unity Developer | Unreal Developer
+SoundXp
+From 12/2016 to Present
+* Founded and led an audio outsourcing company, delivering high-quality music, sound design, and audio integration for mobile, PC, and VR games.
+* Composed 20+ original music and crafted immersive soundscapes for 5+ games, enhancing player engagement through techniques such as SFX layering and foley.
+* Designed and implemented adaptive audio systems using Wwise and FMOD, enabling rapid prototyping and seamless asset integration for interactive music systems.
+* Optimized audio performance with middleware solutions, incorporating field recordings and custom audio component programming that improved sound quality and reduced latency issues.
+* Collaborated with developers, designers, and stakeholders to align audio production with creative vision and technical needs, enhancing team synergy and ensuring project milestones were met on time.
+* Managed version control using Git and Perforce, integrating Continuous Integration (CI) pipelines to automate sound bank deployment and streamline audio packaging processes.
+* Explored synthesizers and emerging technologies to create dynamic soundscapes, setting trends within the studio and enhancing the overall audio experience in interactive games.
+* Managed deliverables using agile methodologies and colaborative tools such as Trello and Asana for project management, and Slack for direct communication.
+
+Skills: Unity Engine,Unreal Engine,Metasounds,Soundcues,Blueprints, FMOD, Wwise, C#, C++, Python, JavaScript, Reaper, Cubase, Ableton Live, Studio One, Logic Pro, Git, Perforce
+Soft Skills: Design Thinking, Cross-Functional Collaboration, Problem-Solving, Adaptability, Creativity, Attention to Detail, Effective Communication
+Methodologies: Agile methodologies,SCRUM, Lean Production, Middleware-Driven Development, CI/CD
+
+
+Game Development Instructor | Unity Developer | Technical Sound Designer
+101 Training
+From 07/2017 to 12/2022
+* Led a six-month Unity3D game development course, delivering comprehensive training on all phases of game creation. From concept and design to coding, UI/UX development, deployment, analytics, and monetization.
+* Mentored groups of 4 to 8 students in hands-on projects, guiding them to build fully functional games for their final submissions.
+* Facilitated interactive sessions, emphasizing practical development strategies and industry best practices.
+* Prepared students for the Unity Certified Developer exam, helping them acquire professional certification and gain real-world expertise.
+* Delivered audio programming guidance to ensure seamless audio integration and SFX triggering in Unity projects.
+
+Skills: Unity, C#, Git, JSON
+Soft Skills: Problem Solving, Mentorship, Cross-functional Collaboration, Effective Communication, Leadership, Project Management, Critical Thinking, Troubleshooting, Time Management
+Methodologies: Agile Development, Code Optimization
+
+
+Senior Unity Developer | Full Stack | Gameplay Programmer | UI Programmer | Technical Sound Designer
+Giant Monkey Robot
+From 03/2018 to 01/2021
+Collaborated on 4+ mobile and WebGL Free to Play games with leading publishers like Glu, Nifty, and Warner Bros., covering both gameplay and backend programming.
+
+Game Development | Backend Programming
+* Designed and implemented backend services using Node.js, MongoDB, Redis, on AWS and Playfab, ensuring seamless client-server communication and scalable infrastructure.
+* Supported live-operated F2P games, leveraging Game as a Service (GaaS) strategies to enhance player engagement and optimize content delivery.
+* Implemented optimized data structures for game data management and client-server communication for 10+ endpoints.
+* Owned and deployed event-driven gameplay systems, such as raid bosses, RPG mechanics, and character equipment systems, increasing player engagement by ~25%.
+* Created comprehensive technical documentation for the Raid Boss System, detailing client-server communication protocols and gameplay mechanics.
+* Integrated client-server features related to character progression, live event leaderboards and multiplayer raid boss battles, creating and consuming API calls to dedicated AWS servers.
+* Developed real-time multiplayer features including team/clan chat systems (screen + client/server integration), and asset delivery pipelines through Unity Addressables and CDN integration.
+* Integrated monetization through rewarded ads with 3rd party native plugin SDKs (IronSource, Tapjoy), generating sustainable revenue without disrupting the user experience.
+* Optimized mobile games for WebGL, reducing load times and ensuring consistent performance across devices.
+* Leveraged Jenkins to automate and streamline build pipelines, reducing build times to just 10 minutes and enabling faster, more reliable releases.
+* Participated of code reviews and design/kick off meetings, giving early technical feedback and ensuring code quality across the team.
+* Partnered with Technical Artists to implement 30+ characters, ensuring seamless integration of models and materials into the Unity pipeline.
+* Implemented 30+ uGUI screens across 4 mobile games, scene and prefab based, with smooth interaction and transition animations using DOTween.
+
+Audio Programming | Technical Sound Design | Music
+* Built and managed interactive audio systems via C# scripting in Unity to synchronize game mechanics and sound design.
+* Integrated middleware solutions (Wwise, FMOD) to create immersive audio experiences across two games.
+* Produced original audio assets, including 5+ music tracks and 30+ SFXs, delivering high-quality audio content within project deadlines.
+
+Skills: Unity,C#,Node.js,MongoDB,Redis,Python,Jenkins,Git,Azure Playfab,Firebase,Crashlytics,IronSource,Wwise,FMOD,Addressables,Client/Server Systems
+Soft Skills: Problem Solving,Creative Thinking,Collaboration,Adaptability,Critical Thinking,Attention to Detail,Teamwork
+Methodologies: Agile Development,SCRUM,Test-Driven Development,CI/CD
+
+
+Senior Unity Developer | Gameplay Programmer | UI Programmer
+Gamaga
+From 08/2017 to 02/2018
+* Developed 2 mobile Free to Play games for iOS and Android using Unity, including a prototype WebGL port, showcasing versatility in multiple platforms.
+* Designed and implemented a skill tree system, integrating inventory items to level up and unlock new abilities, enhancing player engagement.
+* Independently developed crucial gameplay features, including gamelogic and uGUI screens, demonstrating proficiency in Unity development and effective live operations.
+* Created 3 Custom Editors to streamline workflows for UI and design teams, significantly improving efficiency.
+* Spearheaded the initial design and development of a Live Events System, promoting player retention through dynamic content.
+* Improved team efficiency by 50% by diagnosing and fixing a broken Jenkins build pipeline for iOS builds.
+
+Skills: Unity,C#,Jenkins,Git,Crashlytics,Client/Server Systems,Build Pipelines,Editor Tools,Applanga
+Soft Skills: Problem Solving,Analytical Thinking,Creative Thinking,Collaboration,Adaptability,Critical Thinking,Attention to Detail,Teamwork
+Methodologies: Agile Development,SCRUM,CI/CD
+
+
+Unity VR Developer | Gameplay Programmer | UI Programmer | Technical Sound Designer
+Utopic Studio
+From 07/2017 to 09/2017
+Game Development | Gameplay Programming
+* Created 2 interactive game experiences featuring procedural level generation, innovating under tight timelines and resource constraints to maximize replayability and player engagement.
+* Built a procedural level generation system with predefined prefabs for terrain types and obstacles, randomly placed across a movement grid, which improved game replayability by 50%.
+* Collaborated with 3D artists, designers, and programmers in a fully remote setting, using clear communication to align goals, resolve conflicts, and foster creativity across disciplines.
+* Configured mobile and PC deliverable pipelines, solving deployment challenges creatively to ensure cross-platform compatibility and optimal performance.
+* Led team efforts by establishing efficient repository workflows, communicating effectively to streamline collaboration and reduce bottlenecks.
+
+Audio Programming | Technical Sound Design | Music
+* Designed and integrated 10+ sound effects across 2 projects and created original music for one, overcoming creative limitations to deliver immersive soundscapes that enhanced the player experience.
+
+Skills: Unity, C#, Git, VR, Google Cardboard, Build Pipelines, Editor Tools
+Soft Skills: Agile Development, Scrum, CI/CD, Problem Solving, Critical Thinking, Analytical Thinking, Creative Thinking, Collaboration, Adaptability, Attention to Detail, Teamwork, Creativity in Constraints, Communication
+Methodologies: Agile Development, Scrum, CI/CD
+
+
+Senior Unity Developer | Full Stack | Gameplay Programmer | UI Programmer | Technical Sound Designer
+DeNA
+From 07/2013 to 10/2016
+Gameplay Programmer & Game Developer with a proven track record across four titles, including:
+* Blood Brothers 2: Tactical RPG (iOS, Android) (https://youtu.be/jr2eGjyDfhQ?t=31)
+* Star Wars Galactic Defense: Tower defense (iOS, Android, Amazon) (https://goo.gl/K2iNiK)
+* Dungeons and Dragons: Arena of War: Mobile RPG (https://goo.gl/OcVGGR)
+
+Game Development | Gameplay Programming | UI Programming
+* Implemented 30+ screens across four different free to play games, for complex features like "live leaderboards" and "skill tree" a system.
+* Developed and maintained 4 live-operated F2P games, utilizing Game as a Service (GaaS) principles to drive ongoing player engagement and ensure timely content updates.
+* Designed a dynamic Fog of War system using shaders and secondary cameras.
+* Implemented a Continuous Battle System where new teams seamlessly enter the fight if previous teams are defeated, reducing loading times by 50%.
+* Built a RaidBoss Battle System that reacts to HP changes with adaptive animations, soundtracks, and visuals.
+* Developed a modular skill system shared across allies, enemies, and power-ups.
+* Programmed complex AI logic for both player and enemy characters.
+* Engineered gameplay logic using C# and C++ for client-side development.
+* Engineered full-stack client-server features like event leaderboards, inventory handling and player progression, using MongoDB, Redis and NodeJS for backend.
+* Managed asset integration and performance optimization for textures, models, and SFX.
+* Created custom in-editor tools to streamline workflows for designers, animators, and VFX specialists.
+* Utilized 3D mathematics to predict projectile impact point for a tower defence game, ensuring a 90% hit rate for entities moving along a known path.
+* Partnered with Technical Artists to hook up multiple character animations and particle VFX spawning using mechanim state machines.
+
+Audio Programming
+* Created a horizontal resequencing music system in Unity/C# for smooth audio transitions based on enemy HP.
+* Composed interactive orchestral scores and sound effects for in-game events, enhancing player immersion.
+
+Skills: Unity, C#, Node.js, MongoDB, Redis, Jenkins, Git, Crashlytics, AssetBundles, Client/Server Systems
+Soft Skills: Problem Solving, Creative Thinking, Collaboration, Adaptability, Critical Thinking, Attention to Detail, Teamwork
+Methodologies: Agile Development, SCRUM, Test-Driven Development, CI/CD
+
+
+Projects: 
+Somatone Interactive:
+DC Worlds Collide: Turn Based RPG for Android and iOS
+Link: https://dcworldscollidegame.com
+* Key Contributions: 
+  * Designed sound effects for multiple characters abilities, including magical and scifi weapon sfxs. 
+  * Created a wwise soundbanks loading from Asset Bundles system, that loads/releases soundbanks dynamically. 
+  * Developed a Soundbanks build pipeline, that allows packing only a subset of all game soundbanks, while the rest are built as asset bundles for remote loading.
+* Tools: Unity,C#,Wwise,Reaper
+
+Peridot: An AR game for iOS and Android, featuring procedurally generated pets.
+Link: https://playperidot.com/
+* Key Contributions: 
+  * Set initial wwise project setup and created core audio manager for the game.
+  * Built a DLC content pipeline using Addressables.
+* Tools: Unity,C#,Wwise,Addressables,ProTools
+
+Niantic's Marvel: World of Heroes - AR game for iOS and Android
+Gameplay Link: https://youtu.be/o2NG0MWyJAw?t=126
+* Key Contributions: 
+    * Built a DLC content pipeline featuring custom automated import of events,switches and states.
+    * Managed wwise project and integrated UI SFXs across 10+ different screens.
+* Tools: Unity,C#,Wwise,Wwise File Packager,Addressables
+
+NBA Clash: Clash-like game with basketball online PvP, for iOS and Android
+Gameplay Link: https://www.youtube.com/watch?v=XU8Sjt07ZiY
+* Key Contributions: Set core audio manager, DLC content pipeline and audio implementation.
+* Tools: Unity,C#,Wwise,Addressables,Cubase
+
+NFL Clash: Clash-like game with American Footbal online PvP for iOS and Android
+Gameplay Link: https://www.youtube.com/watch?v=N2R2SXz4xWA
+* Key Contributions: 
+    * Composed main menu and battle music for initial prototype, also designed 20+ SFXs including UI and character interactions
+    * Built core audio manager and did initial audio implementation for 10+ UI animations 5+ character SFXs.
+* Tools: Unity,C#,DoTween,Wwise,Cubase
+
+Dolby Atmos Gaming Experience App - Android
+Gameplay Link: https://www.youtube.com/watch?v=8hthPXT1RqQ
+* Key Contributions:
+  * Led the game development of a demo game with various sections that showcases different applications for Dolby Atmos for Games
+  * Designed and integrated sound effects for weapons, environments, footsteps, enemies and UI
+  * Developed a dynamic footstep system utilizing mesh tags and raycasting to trigger context-specific sound effects
+  * Creation of the core audio system.
+  * Developed associated gameplay mechanics and enemy AI logic
+  * Applied audio debugging techniques (profiler, messages log and soundcaster) to preview and audit game audio, ensuring both gameplay audio and Dolby plugin integration work correctly.
+* Tools: Unity,C#,Wwise,Dolby Atmos for Mobile Plugin
+
+Niantic's Catan: World Explorers (Unrelased AR Game) (iOS and Android)
+* Key Contributions: 
+  * initial wwise project setup and core audio manager for a seamless wwise / unity integration.
+  * Created custom audio components to seamesly integrate audio with animations and cinematics,
+  * Designed and implemented 20+ sound effects for player interactions across 10+ unique screens.
+  * Debugged and audited own SFXs and other teammember contributions (music/stingers), ensuring every new addition was working correctly.
+* Tools: Unity,C#,Timelines,Wwise,Cubase
+
+StarQuest: Top-down space shooter game for iOS and Android.
+Gameplay Link: https://www.youtube.com/watch?v=BUwxfJFIewI
+* Key Contributions: 
+   * Created core audio system (Wwise + Unity integration) to easily trigger music and sound effects for the game.
+   * Designed and implemented 10+ spaceships, weapons, metallic impacts and combat sound effects
+   * Programmed 5+ custom components for weapon sfxs and vehicle impact sfxs.
+   * Ensured optimized audio for mobile devices, by adjusting audio compression and limiting total voices count per object and event instance.
+* Tools: Unity,C#,Wwise,Cubase
+
+AmberSky: VR Experience for PC
+Gameplay Link: https://www.youtube.com/watch?v=DCFdkyu7sNY
+* Key Contributions: Designed and integrated sound effects for 3 creature movements and attack,managed the FMOD project,implemented spatialization using Google's Resonance spatialization plugin
+* Tools: FMOD,Google Resonance,Cubase
+
+
+Tomorrow Media:
+Degen Rivals Multiplayer:Vehicle-based PVP battle royale for WebGL and Mobile (iOS, Android)
+Link: https://play.google.com/store/apps/details?id=com.TevaeraLabs.DegenRivals
+Link: https://store.steampowered.com/app/4132610/DeGen_Rivals/
+Gameplay Link: https://www.youtube.com/watch?v=SmWhDKrFvuw
+* Key Contributions:
+  * Created a data-driven weapons system with support for fire rate, burst and ammo control in a multiplayer environment.
+  * Created a companion ability system that was used to drive 15+ weapon effects (damage, stat changes) and 10+ pickup effects (damage 2x, increased speed, shield, hp regen, etc)
+  * Developed a car engine audio system, that mimics multiple revs using just a single audio source and pitch changes across multiple curves to simulate gears switching.
+  * Programmed an audio manager that supports having multiple variations per sfx, pitch and volume randomness and remote loading using addressables.
+  * Designed sound effects for 15+ vehicle weapons (futuristic and magical ones) and 10+ environment interactions (objects destruction and explosions and metallic impacts for collisions between cars and environment.
+  * Adjusted audio compression and applied object pooling for sound effects, ensuring optimal loading times and memory footprint for WebGL deployment.
+  * Engineered a music playlist system that can be used to play/shuffle tracks players can listen while in the main menu and the game.
+* Tools: Unity,C#,Cubase,Photon Quantum
+
+
+Redemption Games:
+Crushers! Match3 Puzzle Game with Multiplayer online PvP and RPG Mechanics for iOS, Android and PC (Steam)
+Link: https://play.google.com/store/apps/details?id=com.redemptiongames.immortalsgame
+Gameplay Link: https://www.youtube.com/watch?v=6BuEpvGEuWg
+* Key Contributions: 
+  * Authored a data-driven, event-driven tutorial system with hot-reloading, decreasing iteration times by 35%.
+  * Streamlined code efficiency by consolidating libraries into packages, reducing project load times.
+  * Optimized game performance by around 30% by using object pooling for spawned pieces and VFxs, ensuring smooth gameplay without framedrops.
+  * Composed original music for game's initial prototype
+  * Created an interactive vertical resequencing system for battle music.
+  * Created a dynamic sfxs system that allows playing sfxs with multiple variations and random pitch and volume modifiers.
+* Tools: Unity,C#,Photon Quantum,ECS,Firebase,Firestore,Crashlytics,Build Pipelines,Python,Node.JS,Github Actions,UPM,Git
+
+
+Globant:
+Power Rangers: Morphin Legends - Turn-Based RPG for iOS and Android
+Gameplay Link: https://youtu.be/b4oCUsCo1_g
+* Key Contributions:
+  * Refactored the ability system, using dependency injection and unit tests, improving debugging efficiency by 50%.
+  * Enhanced the abilities system to be fully data-driven and made it unit testable. Developed numerous in-game abilities using this system, optimizing maintainability and scalability.
+  * Designed and implemented a data-driven, event-driven tutorial system, which listens to in-game events and dynamically triggers tutorials based on player actions (e.g., highlighting buttons), offering greater flexibility in tutorial activation and sequencing. It featured checkpoint and persistence mechanisms, allowing players to resume tutorials from saved progress and ensuring continuity even if they leave mid-tutorial.
+  * Programmed client-server features like characters level-up and items equipment, while also consuming APIs to retrieve current events and progress on each one.
+  * Helped create a complex skill animations system using Timeline sequenced, syncing animations, VFXs spawning and SFXs to create 60+ stunning ability animations for 20+ characters.
+  * Engineered an immersive SFX system that powered +30 SFXs, enhancing combat feedback and player experience.
+  * Composed and implemented original music, inspired by the style of 90’s TV show soundtracks, adding an authentic and nostalgic atmosphere to the game.
+* Tools: Unity,C#,Python,NodeJS,Cubase
+
+
+Giant Monkey Robot:
+Design Home (Lifestyle/house makeover) (Glu/Crowdstar) for iOS, Android and WebGL
+Gameplay Link: https://www.youtube.com/watch?v=m48ahtQM8pQ
+* Key Contributions: 
+  * Optimized screens and UI interactions for WebGL version of the game, ensuring proper readability and smooth interaction.
+* Tools: Unity, C#, WebGL
+
+(Unreleased Game) - Space exploration simulator with realtime multiplayer PvP battles for iOS, Android and PC
+Gameplay Link: 
+* Key Contributions:
+  * Refactored behavior tree system used for space ships to be data-driven, simplifying their logic while reinforcing the single responsability principle.
+  * Authored a custom behaviour tree unity editor to allow designers to build custom AI types without having to touch the code.
+  * Designed and implemented original orchestral & scifi music 
+  * Created +20 SFX for space ship movement, combat sound effects for projectiles and explosions, modules construction interactions and general UI interactions, using original recordings, foley and sound libraries layering.
+* Tools: Unity, C#, FMOD, Editor Tools, Git, Cubase.
+
+NFL Clash (Casual game featuring realtime NFL matches) (Nifty), for iOS and Android
+Gameplay Link: https://www.youtube.com/watch?v=N2R2SXz4xWA
+* Key Contributions: 
+  * Optimized build pipeline to work with Unity's CDN, along with setting up initial remote content delivery logic using Addresables.
+  * Integrated a teams chat system and client-server interactions using Playfab cloud functions.
+  * Designed and implemented original music and 10+ sound effects for gameplay and ui interactions, helping shaping the game's auditory identity.
+* Tools: Unity, C#, Addressables, Build Pipelines, Jenkins, Git.
+
+DC Legends (Turn based RPG) (Warner) for iOS and Android
+Gameplay Link: https://youtu.be/IzIBqT35HIc
+* Key Contributions: 
+  * Contributed to expanding a complex, data-driven ability system, implementing chained and conditional effects that impacted multiple characters from both teams. 
+  * Enhanced the abilities editor tool to streamline the development process for designers.
+  * Created a Raid Boss Battle system, which was a key feature that increased active players by ~30% when active:
+    * Implemented data structures for seamless client-server communication.
+    * Created initial client-server architecture, programming backend endpoints and consuming them later from the game client, using NodeJS, MongoDB and Redis for backend.
+    * Introduced ""minions"" feature to protect the RaidBoss during battles.
+    * Optimized existing systems to dynamically adjust character stats in real-time during RaidBoss encounters.
+* Tools: Unity, C#, NodeJS, MongoDB, Redis, Jenkins, Build Pipelines, Perforce
+
+
+SoundXp:
+Viking Hunters: Casual game based on the Nordic era, for iOS and Android (Winner of VG Chile's 2017 Best Mobile Game Award, Latin America Indie Prize Finalist 2018)
+Gameplay Link: https://www.youtube.com/watch?v=vM9zwn5C1XU
+* Key Contributions:
+  * Created 3 original orchestral music tracks with a strong Nordic influence (Main Menu, Battle and Boss Battle)
+  * Designed 20+ sound effects, covering enemy attacks, player abilities, weapon throws (arrows, javalines, etc), and ambiences (rain, heavy rain, sea water), by using foley and sounds layering.
+
+Space Rally (unreleased game): Casual game in which you have to collect materials on a futuristic rover vehicle, for Android and iOS.
+Gameplay Link: None
+* Key Contributions:
+  * Composed 5 original pieces of music using synthesizers and drum machines to immerse the player in a futuristic Mars colony.
+  * Crafted 25+ SFXs covering UI interactions and rover vehicle sound effects (engines, drifting, and collision impacts)
+
+Pocket Forest: Casual Match3 game for mobile (iOS, Android)
+Gameplay Link: https://www.crazygames.com/game/pocket-forest
+* Key Contributions:
+  * Coordinated music deliverables, ensuring that each revision's feedback was addressed, facilitating communication with the development team.
+  * Created 15 SFXs that cover UI interactions and gameplay events, ensuring consistency throughout the game.
+
+Crystal Corruption: Top-down local co-op PvPvE game for PC
+Gameplay Link: https://www.youtube.com/watch?v=dKC6MHtdR4A
+* Key Contributions: 
+  * Composed interactive music with 4 phases, including intro and "finale" tracks, for horizontal resequencing.
+  * Programmed a C# system for horizontal resequencing playback, enabling each clip to have its own BPM and time signature for precise beat syncing, and reverb tails for seamless looping.
+  * Designed 5+ sound effects for different character abilities.
+
+
+Gamaga:
+Operate Now: Hospital - Surgeon simulator with hospital managment mechanics, for iOS and Android
+Gameplay Link: https://youtu.be/D_TCBzzSXi4
+* Key Contributions: 
+  * Designed and implemented a skill tree system, integrating inventory items to level up and unlock new abilities, enhancing player engagement.
+  * Spearheaded the initial design and development of a Live Events System, promoting player retention through dynamic content.
+  * Authored an exploratory prototype version of a WebGL port of the game, that helped to quickly review the viability of porting the game given their current framework depedencies.
+* Tools: Unity, C#, Applanga, Jenkins, Git, Build Pipelines,Editor Tools
+
+
+Utopic Studio:
+Kayak VR Experience - Kayak simulator for Android & Samsung VR
+Gameplay Link: https://youtu.be/RMLKkYp8_kg
+* Key Contributions: 
+  * Built an infinitely scrolling map system using pre-built scenery pieces that are dynamically spawned based on the player's travelled distance.
+  * Engineered endless runner-like mechanics to place obstacles randomly over the map, and terrain generation, to enhance replayability by 5x.
+  * Managed the build pipeline of deliverables for mobile and PC, ensuring faster iteration times.
+* Tools: Unity, C#, VR, Google Cardboard, Unity XR Toolkit, Build Pipelines, Git
+
+Surf Experience - Surf arcade simulator for PC
+Gameplay Link: https://youtu.be/lCE2zrgD7c4
+* Key Contributions: 
+  * Built a procedural level generation system consisting of prefabs of terrain types and obstacules, allowing for endles runner-like level generation for increased replayability.
+  * Team coordination, ensuring features were integrated on time and without bugs.
+* Tools:Unity, C#, Arduino, Build Pipelines, Git
+
+
+DeNA:
+Blood Brothers 2 - Tactical 2D RPG with online PvP for iOS and Android
+Gameplay Link: https://youtu.be/jr2eGjyDfhQ?t=31
+* Key Contributions
+  * Improved the logic of their 3v3 PVP matches by loading the next player team without having to go to a full size loading screen, reducing PVP match loading times by ~50%. This system was later used for their Raid Boss event, allowing player teams to load without leaving the combat screen.
+  * Developed a raid boss battle system that allowed multiple players to engage a single enemy. This was a big feature where I worked with the server team, game designers and artists to create a fun and engaging experience for players. This system featured a multi-phase boss battle where the boss would change its abilities, appearance and animations as the players dealt damage to it.
+  * Programmed an horizontal re-sequencing music system that changed the music depending on the phase of the battle, where the music would change seamlessly without any audio cut.
+  * Developed a Fog of War system for the game that uses a custom shader to show/hide detected areas.
+* Tools:Unity, C#, NodeJS, MongoDB, Jenkins, Git, Crashlytics, AssetBundles, Client/Server Systems.
+
+Timenauts - Tactical 2D RPG with async PvP for iOS and Android
+Gameplay Link: https://youtu.be/myd5YPaZQ_8?si=shER12SsZZap9GMM&t=81
+* Key Contributions: 
+  * Created a rich data-driven skills system for characters and towers, enriching gameplay and player interaction.
+* Tools: Unity, C#, Build Pipelines
+
+Star Wars Galactic Defense - 2D Tower Defense for iOS, Android and Amazon
+Gamplay Link: https://youtu.be/tu3pFrD_qp8
+* Key Contributions: 
+  * Developed and expanded a data-driven abilities system for towers and characters, integrating instant stat changes (e.g., healing), status effects (e.g., damage over time), and area-of-effect mechanics (e.g., healing fountains, lava zones), enriching gameplay and player interaction.
+  * Optimized Android game size by 35% using ETC compression for transparent textures. Developed a pipeline to split textures into RGB and Alpha channels and created shader variants to recombine them at runtime, reducing memory usage and improving performance on OpenGL 2.0 devices.
+  * Programmed an audio system with separate controls for music and SFX, prioritizing key audio events and implementing audio ducking, pre-dating Unity's audio mixer.
+  * Worked with animation team to hook-up special ability vfxs from animator state machines, ensuring they play at the right time.
+* Tools:Unity, C#, NodeJS, MongoDB, Build Pipelines, Jenkins, Git, Crashlytics, AssetBundles, Client/Server Systems.
+
+Dungeons & Dragons: Arena of War - Turn based RPG for iOS and Android
+Gameplay Link: https://goo.gl/OcVGGR
+* Key Contributions: Developed backend components with Node.js, MongoDB, and Redis, enabling real-time client-server interactions.
+* Tools: NodeJS, MongoDB, Redis, Unit Tests
+
+
+Personal:
+Echoes of the Forgotten Isle: Third Person Shooter Demo (Personal Project) for PC
+Gameplay Link: https://gamingsoft.itch.io/echoes-of-the-forgotten-isle
+* Key Contributions:
+  * designed functional 3rd person prototype, including main character, enemies, UI and player interactions (health, progress tracking and game ending flow)
+  * constructed a modular character system to implement character stats, weapon usage and AI behaviour for enemies and main character.
+  * Implemented and managed complex character animation state machines using Mecanim to create fluid character movements and interactions.
+  * created animation controllers to move characters and to sync footsteps sfxs and attack logic (damage, playing attack SFX/VFX, reacting to damage, dying).
+  * Designed and implemented a biome-based acoustic system across 5 distinct open-world environments (coast, plains, waterfalls, tundra, lake), allowing players to identify regions through unique ambient soundscapes and terrain-based footstep SFX.
+  * Authored a dynamic music system using Wwise, enabling seamless transitions between exploration and combat states, inspired by The Witcher 3’s adaptive soundtrack structure.
+  * Composed a neofolk orchestral score featuring medieval strings, dulcimer, tribal percussion, and atmospheric synths, with real-time modal shifts (Dorian for exploration, Phrygian for combat) triggered by gameplay parameters.
+  * Integrated Google Resonance for spatial audio rendering, enhancing directional cues such as enemy movement, weapon impacts, and ambient wildlife.
+  * Engineered terrain-aware footstep logic using Unity’s physics and tagging system, supporting dynamic SFX playback across grass, rock, sand, and snow.
+  * Designed and implemented interactive audio feedback systems:
+    * Weapon impact SFX vary by enemy material (metal, flesh, stone).
+    *Unique sound profiles for enemy attacks and movement.
+    *Trap chest emits distinct activation/deactivation cues tied to player interaction.
+    * Programmed ambient audio transitions based on time-of-day cycles:
+    * Daytime: birdsong, wind textures, environmental loops.
+    * Nighttime: crickets, silence, and music fade-outs at dusk with re-emergence at dawn.
+  * Optimized player immersion by recommending headphone use and enabling Windows Sonic or Dolby Atmos for spatial audio playback.
+  * Uploaded and distributed the prototype via itch.io, receiving early feedback on sound design fidelity and environmental immersion.
+* Tools: Unity,C#,Wwise,Google Resonance,Audio Tagging,Terrain Detection,Real-Time Parameter Control (RTPC),Adaptive Music Design,Spatial Audio Systems
+
+Simple Third Person Shooter & MetaSounds Demo (Personal Project) - TPS for PC
+Gameplay Link: https://gamingsoft.itch.io/simple-fps-metasounds-demo
+* Key Contributions:
+  * Built mechanics for firing projectiles, spawning impact VFXs and keeping character stats using Damage System, demonstrating expertise in Unreal Engine, C++, and visual scripting with Level Blueprints.
+  * Used Unreal Engine's editor and level design tools for level prototyping and audio placement.
+  * Designed 3 types of enemy AI using Unreal's behavior trees to make enemies chase/fire at the player.
+  * Implemented a HUDs (to display player’s health and the number of enemies left), and 3 popups using UI Widgets.
+  * Tagged 5+ animations with event notifiers to trigger Footsteps SFXs, while also doing IK and animation retargeting.
+  * Authored an interactive and procedural SFXs and music system using Metasounds and sound cues, including level blueprints for environmental triggers.
+  * Additionally, I composed a multi-layered orchestral hybrid music and designed 5+ sound effects for the game.
+* Tools: Unreal Engine 5, C++, Blueprints, UI Widgets, Behavior Trees, Animation Tagging / Retargeting, Metasounds, SoundCues
+
+Spooky Arena: (Personal Ongoing Project) - 2.5D PvP Multiplayer Arrena for WebGL
+Gameplay Link: https://gamingsoft.itch.io/spooky-arena
+* Key Contributions: 
+  * Developed a 60 seconds long multiplayer PvP arena game with real-time movement and combat logic.
+  * Created animation state machines for all characters, to play move, jump and attack animations.
+  * Implemented Photon Quantum networking, managing up to 6 player synchronization, projectiles movement, character states (respawn, die) and real-time scoring.
+  * Designed 4+ competitive mechanics, including player abilities, waves, destructibles and match progression.
+  * Making heavy usage of ECS architecture to move objects and control game logic, while leveraging command pattern to communicate key actions from client to photon quantum simulation.
+  * Additionally, composed original multi-phase orchestral music and designed 5+ SFX for enhanced player experience.
+* Tools: Unity, C#, Multiplayer, Photon Quantum, ECS, Timeline
+
+Asteroids New Hope (Personal Project): 2D Asteroids game for WebGL
+Gameplay Link: https://gamingsoft.itch.io/asteroids-game-demo
+* Key Contributions: 
+  * Created mechanics for aiming, shooting, firing projectiles, destroying asteroids and spawning impact VFXs.
+  * Created logic to randomly spawn weapon upgrades when destroying UFOs, such as increase fire rate or fire more bullets at once.
+  * Added basic player stats system to keep track of lives left, enemies destroyed and upgrades equipped.
+  * Core audio manager to play music and trigger sfxs using Unity's built-in system (it uses a pool of audio sources for better performance).
+  * Simple but effective bullet pooling system based on Unity's pooling classes.
+  * Created logic to move asteroids and bullets using D.O.T.S. system.
+  * Created a basic HUD system to display your score, remaining lives and stats when you lose (i.e. asteroids/enemies destroyed).
+  * Additionally, I composed the music and designed 10+ sound effects for the game.
+* Tools: Unity,C#,D.O.T.S.,ECS
+
+2D Funky Platform Demo (Personal Project): 2D Platform game for WebGL
+Gameplay Link: https://gamingsoft.itch.io/2d-funky-platformer-demo
+* Key Contributions: 
+  * Programmed Core gameplay mechanics (jumping, swimming, falling rocks, collecting coins, health tracking).
+  * Created main character animator state machineto support multiple behaviours (jump, move)
+  * Added camera movement (2D confinement, smooth tracking and position based camera shake using Cinemachine).
+  * Added in-game sequences using Unity's timeline.
+  * Added simple player stats system to keep track of your remaining lives and score.
+  * Added a simple system (using Unity physics) to simulate the player being pulled by the movement of the river.
+  * Created a simple dialogue system to teach the player how to play and progress.
+  * Core audio manager to play music and trigger SFXs using Unity's built-in system (it uses a pool of audio sources for better performance).
+  * Engineered an efficient intro-loop music system for in-game music in C#, sinced to beat.
+  * Composed the music and designed 5+ sound effects for the game.
+* Tools: Unity,C#,Cinemachine,Timeline
+
+Slippery Logs: 2D Infinite Jumper with remote settings, leaderboard and backend persistence, for WebGL and Android
+Gameplay Link: https://youtu.be/M3qYVky0Jq0?si=_Dvn9w4Z3LN9I2DQ
+* Key Contributions:
+  * Developed core gameplay logic (jumping over logs, character energy, collectables and enemies).
+  * Added basic player stats system to keep track of your remaining energy and score.
+  * Integrated PlayFab to store player data, retrieve leaderboards, gameplay related cloud functions, remote parameters and localization.
+  * Created a simple but effective pooling system for logs and collectables.
+  * Crafted a system that spawns log sections infinitely as you progress.
+  * Engineered an audio manager for playing music and triggering SFXs using Unity's built-in system (it uses a pool of audio sources for better performance).
+  * Created and programmed all the game's screens.
+  * Composed Chiptune (NES) folk music (Cueca) and designed the 5+ sound effects for the game.
+* Tools: Unity,C#,Playfab,NodeJS,Localization
+
+Languages: English (C1), Spanish (Native), Italian (basic)
+
+Education: Master's Degree in Music Composition for Video Games  | eArtes | Ongoing
+Unreal Engine 5 C++ Developer Certificate | Udemy
+Unity Certified Professional: Programmer | Unity Technologies
+Orchestrating and Producing Music for Films and Games | Berklee Online 
+Degree in Computer Science | Universidad De Aconcagua

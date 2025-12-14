@@ -172,6 +172,30 @@ export const featuredProjects = [
 
 export const personalProjects = [
     {
+        id: "forgotten-isle",
+        title: "Echoes of the Forgotten Isle",
+        subtitle: "Third-Person Open-World Prototype with Adaptive Audio",
+        focus: "Character Systems & AI Programming",
+        tech: ["Unity", "C#", "Mecanim", "Wwise", "Google Resonance"],
+        keyFeaturesTitle: "Key Features",
+        keyPoints: [
+            { strong: "Modular Character System:", text: "Architected a flexible character framework supporting stats, weapon mechanics, and AI behaviors for both player and enemies." },
+            { strong: "Complex Animation:", text: "Implemented Mecanim-driven animation controllers with synchronized footstep SFX, attack logic, and damage reactions." },
+            { strong: "Intelligent Enemy AI:", text: "Developed behavior systems for enemy pathfinding, combat engagement, and terrain-aware movement across 5 biomes." },
+            { strong: "Interactive Audio:", text: "Engineered terrain-detection footsteps, material-based weapon impacts, and Wwise-powered adaptive music." },
+            { strong: "Biome-Based Design:", text: "Created 5 open-world environments with spatial audio using Google Resonance and time-of-day cycles." }
+        ],
+        embedSrc: "https://itch.io/embed/3710091?dark=true",
+        embedLinkText: "Echoes of the Forgotten Isle",
+        embedLinkUrl: "https://gamingsoft.itch.io/echoes-of-the-forgotten-isle",
+        mediaDescription: "Explore an open-world prototype with modular character systems and adaptive audio. Experience terrain-aware interactions and intelligent enemy AI.",
+        result: {
+            strong: "Skills Demonstrated:",
+            text: "Advanced animation programming, modular architecture design, AI behavior systems, and interactive audio integration."
+        },
+        footerNote: "*Composed original neofolk fantasy orchestral score with real-time modal shifts."
+    },
+    {
         id: "spooky-arena",
         title: "Spooky Arena",
         subtitle: "2.5D Online Multiplayer Arena Combat",
@@ -306,29 +330,5 @@ export const personalProjects = [
             text: "Creative game design innovation, custom content systems, narrative programming, and emotional user experience design."
         },
         footerNote: "Unlock unique musical themes!"
-    },
-    {
-        id: "forgotten-isle",
-        title: "Echoes of the Forgotten Isle",
-        subtitle: "Third-Person Open-World Prototype with Adaptive Audio",
-        focus: "Character Systems & AI Programming",
-        tech: ["Unity", "C#", "Mecanim", "Wwise", "Google Resonance"],
-        keyFeaturesTitle: "Key Features",
-        keyPoints: [
-            { strong: "Modular Character System:", text: "Architected a flexible character framework supporting stats, weapon mechanics, and AI behaviors for both player and enemies." },
-            { strong: "Complex Animation:", text: "Implemented Mecanim-driven animation controllers with synchronized footstep SFX, attack logic, and damage reactions." },
-            { strong: "Intelligent Enemy AI:", text: "Developed behavior systems for enemy pathfinding, combat engagement, and terrain-aware movement across 5 biomes." },
-            { strong: "Interactive Audio:", text: "Engineered terrain-detection footsteps, material-based weapon impacts, and Wwise-powered adaptive music." },
-            { strong: "Biome-Based Design:", text: "Created 5 open-world environments with spatial audio using Google Resonance and time-of-day cycles." }
-        ],
-        embedSrc: "https://itch.io/embed/3710091?dark=true",
-        embedLinkText: "Echoes of the Forgotten Isle",
-        embedLinkUrl: "https://gamingsoft.itch.io/echoes-of-the-forgotten-isle",
-        mediaDescription: "Explore an open-world prototype with modular character systems and adaptive audio. Experience terrain-aware interactions and intelligent enemy AI.",
-        result: {
-            strong: "Skills Demonstrated:",
-            text: "Advanced animation programming, modular architecture design, AI behavior systems, and interactive audio integration."
-        },
-        footerNote: "*Composed original neofolk fantasy orchestral score with real-time modal shifts."
     }
 ];

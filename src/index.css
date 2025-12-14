@@ -39,8 +39,8 @@ body {
   background-color: var(--bg-void);
   color: var(--text-primary);
   font-family: var(--font-body);
-  /* Custom Cursor */
-  cursor: url('/cursor-default.svg') 16 16, auto;
+  /* Custom Cursor - Hotspot at 2 2 to match SVG arrow tip */
+  cursor: url('/cursor-default.svg') 2 2, auto;
 }
 
 h1,
@@ -65,11 +65,14 @@ h6,
 a {
   color: var(--accent-cyan);
   transition: color 0.2s ease, text-shadow 0.2s ease;
-  cursor: url('/cursor-pointer.svg') 16 16, pointer;
+  cursor: url('/cursor-pointer.svg') 2 2, pointer;
 }
 
-button, .btn, .nav-link, .js-scroll-trigger {
-  cursor: url('/cursor-pointer.svg') 16 16, pointer !important;
+button,
+.btn,
+.nav-link,
+.js-scroll-trigger {
+  cursor: url('/cursor-pointer.svg') 2 2, pointer !important;
 }
 
 a:hover {
@@ -192,6 +195,10 @@ a:hover {
   perspective: 1000px;
   position: relative;
   overflow: hidden;
+}
+
+.hero-content-wrapper {
+  margin-top: -15vh;
 }
 
 .hero-bg-atmosphere {
@@ -633,5 +640,59 @@ a:hover {
   .col-lg-4[style*="sticky"] {
     position: static !important;
     margin-bottom: 2rem;
+  }
+}
+
+/* =========================================
+   Landscape Mobile Optimization
+   Targeting devices with short height (e.g. iPhones in landscape)
+   ========================================= */
+@media (max-height: 600px) and (orientation: landscape) {
+
+  /* Hide scroll indicator to save checking space */
+  .scroll-indicator-link {
+    display: none !important;
+  }
+
+  /* Compact the Hero Title */
+  .hero-title {
+    font-size: 2rem !important;
+    /* Smaller text */
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Compact spacing for subtitles */
+  .hero-subtitle-container {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* Reduce margin on the main description */
+  .text-white.mb-5 {
+    margin-bottom: 1.5rem !important;
+    /* Was mb-5 (3rem) */
+    font-size: 1.1rem;
+  }
+
+  /* Compact the main CTA button */
+  .btn.btn-lg {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Ensure the container doesn't cut off the top if vertically centered */
+  .hero-parallax-container {
+    height: auto !important;
+    min-height: 100vh !important;
+    /* Space for navbar */
+    padding-bottom: 1rem !important;
+  }
+
+  /* Reset the negative shift on compact screens so title isn't cut off */
+  .hero-content-wrapper {
+    margin-top: 0 !important;
   }
 }
