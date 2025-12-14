@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Active State: Glows brighter and slightly different shape -->
+  <path d="M2 2L10 26L14 16L24 12L2 2Z" fill="#66FCF1" stroke="#45A29E" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Active indicator -->
+  <circle cx="9" cy="13" r="2" fill="#1F2833"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minimalist Sci-Fi Arrow -->
+  <path d="M2 2L12 28L16 18L26 14L2 2Z" fill="#1F2833" stroke="#66FCF1" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Center Dot detail -->
+  <circle cx="10" cy="14" r="2" fill="#66FCF1"/>
+</svg>
