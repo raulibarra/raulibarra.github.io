@@ -108,7 +108,7 @@ const About = () => {
                     </p>
 
                     <p style={{ textAlign: 'justify' }}><strong>Interactive Audio Systems</strong>: Specialized in advanced audio programming across multiple
-                        projects—implementing Wwise & FMOD adaptive audio, MetaSounds in Unreal Engine, spatial audio with
+                        projects, implementing Wwise & FMOD adaptive audio, MetaSounds in Unreal Engine, spatial audio with
                         Google Resonance, and dynamic audio transitions that respond to gameplay. Composed original soundtracks
                         and designed immersive soundscapes for enhanced player experiences.</p>
 
@@ -126,7 +126,7 @@ const About = () => {
 
                     {/* Personality Closer */}
                     <div className="info-panel variant-gold mt-4">
-                        <p className="mb-0" style={{ textAlign: 'justify' }}><strong>💡 My Approach:</strong> I don't just write code—I architect complete game
+                        <p className="mb-0" style={{ textAlign: 'justify' }}><strong>💡 My Approach:</strong> I don't just write code: I architect complete game
                             ecosystems. From multiplayer networked systems to interactive audio, from backend services to
                             polished player-facing UI, I build versatile technical solutions that scale, adapt, and create
                             unforgettable experiences.</p>
