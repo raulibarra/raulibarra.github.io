@@ -6,6 +6,7 @@ import ProjectsList from './components/ProjectsList';
 import Footer from './components/Footer';
 import NMadCompanion from './components/NMadCompanion';
 import ChatInterface from './components/ChatInterface';
+import config from './config.json';
 
 function App() {
 
@@ -66,8 +67,12 @@ function App() {
   return (
     <div id="page-top">
       {/* NMad AI Companion */}
-      <NMadCompanion onToggleChat={() => setChatOpen(!chatOpen)} />
-      <ChatInterface isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+      {config.enableChat && (
+        <>
+          <NMadCompanion onToggleChat={() => setChatOpen(!chatOpen)} />
+          <ChatInterface isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+        </>
+      )}
 
       {/* Navigation */}
       <nav className={`navbar navbar-expand-lg bg-secondary fixed-top ${navbarShrink ? 'navbar-shrink' : ''}`} id="mainNav">
