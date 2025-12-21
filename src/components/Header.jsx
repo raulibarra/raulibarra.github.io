@@ -1,6 +1,6 @@
 
 
-const Header = ({ onToggleSection }) => {
+const Header = ({ onToggleSection, isBotEnabled }) => {
 
     return (
         <div className="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden" style={{ minHeight: '100vh' }}>
@@ -22,7 +22,12 @@ const Header = ({ onToggleSection }) => {
             <div className="position-absolute w-100 h-100 hero-vignette" style={{ zIndex: 2, opacity: 0.2 }}></div>
 
             {/* Layer 3: Main Content (Foreground) */}
-            <div className="text-center position-relative hero-content-wrapper" style={{ zIndex: 10 }}>
+            <div className="text-center position-relative hero-content-wrapper"
+                style={{
+                    zIndex: 10,
+                    marginTop: isBotEnabled ? '-20vh' : '0',
+                    transition: 'margin-top 0.5s ease'
+                }}>
                 <h1 className="hero-title mb-4" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>RAUL IBARRA ARANDA</h1>
 
                 <div className="hero-subtitle-container mb-4">
@@ -37,6 +42,10 @@ const Header = ({ onToggleSection }) => {
                     Engineering <span className="text-accent">Immersive Gameplay</span> & <span className="text-accent">Scalable Systems</span>
                 </h3>
 
+                <div className="status-badge text-accent font-code small mb-4 animate-fadeIn">
+                    <span className="me-2">●</span>AVAILABLE FOR NEW OPPORTUNITIES
+                </div>
+
                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                     <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger"
                         href="#games-portfolio"
@@ -49,6 +58,12 @@ const Header = ({ onToggleSection }) => {
                         }}
                     >
                         VIEW PROJECTS
+                    </a>
+                    <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger btn-contact-premium"
+                        href="#contact"
+                        style={{ background: 'rgba(11, 12, 16, 0.8)', backdropFilter: 'blur(4px)' }}
+                    >
+                        <i className="fas fa-paper-plane me-2"></i> CONTACT ME
                     </a>
                 </div>
             </div>

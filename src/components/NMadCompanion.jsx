@@ -31,7 +31,7 @@ const NMadCompanion = ({ onToggleChat }) => {
             const ease = progress * (2 - progress); // EaseOutQuad
 
             // We'll use fixed positioning and lerp values
-            const startBottom = 25; // %
+            const startBottom = 15; // % (Lowered to avoid overlap with hero buttons)
             const endBottom = 50; // %
 
             const startLeft = 50; // %

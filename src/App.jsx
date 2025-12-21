@@ -10,25 +10,6 @@ import config from './config.json';
 
 function App() {
 
-  // Smooth scrolling implementation for React
-  useEffect(() => {
-    const handleScroll = (e) => {
-      const target = e.target.closest('a.js-scroll-trigger');
-      if (target && target.hash && target.hash !== '#') {
-        const element = document.querySelector(target.hash);
-        if (element) {
-          e.preventDefault();
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    };
-
-    document.addEventListener('click', handleScroll);
-    return () => document.removeEventListener('click', handleScroll);
-  }, []);
 
   // Navbar Shrink Logic
   const [navbarShrink, setNavbarShrink] = useState(false);
@@ -59,7 +40,7 @@ function App() {
       const id = section === 'featured' ? 'games-portfolio' : 'personal_projects';
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView();
       }
     }, 100);
   };
@@ -129,7 +110,10 @@ function App() {
 
       {/* Header / Hero */}
       <header className="bg-indigo">
-        <Header onToggleSection={handleSectionToggle} />
+        <Header
+          onToggleSection={handleSectionToggle}
+          isBotEnabled={config.enableChat}
+        />
       </header>
 
       {/* About Section */}
