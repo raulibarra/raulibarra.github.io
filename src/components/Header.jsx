@@ -1,14 +1,15 @@
 
 
+import HeroBackground from './HeroBackground';
 const Header = ({ onToggleSection, isBotEnabled }) => {
 
     return (
         <div className="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden" style={{ minHeight: '100vh' }}>
 
             {/* Background Simulation (Absolute to cover full area) */}
-            {/* Background Simulation (Absolute to cover full area) */}
-            <div className="position-absolute w-100 h-100" style={{ zIndex: 0, top: 0, left: 0, background: '#0b0c10' }}>
-            </div>
+
+            {/* Animated Canvas Background */}
+            <HeroBackground />
 
             {/* Layer 1: Dark Overlay Gradient for Text Readability */}
             <div className="position-absolute w-100 h-100" style={{
