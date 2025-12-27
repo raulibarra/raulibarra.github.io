@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
@@ -9,10 +9,29 @@ import ChatInterface from './components/ChatInterface';
 import config from './config.json';
 
 function App() {
+  // Theme Logic
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) return savedTheme;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
 
+  useLayoutEffect(() => {
+    localStorage.setItem('theme', theme);
+    if (theme === 'light') {
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   // Navbar Shrink Logic
   const [navbarShrink, setNavbarShrink] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activeCanvas, setActiveCanvas] = useState('featured'); // 'featured' or 'personal'
   const [chatOpen, setChatOpen] = useState(false);
 
@@ -25,7 +44,6 @@ function App() {
       }
     };
 
-    // Run once on mount to handle refresh position
     navbarCollapse();
 
     window.addEventListener('scroll', navbarCollapse);
@@ -34,8 +52,6 @@ function App() {
 
   const handleSectionToggle = (section) => {
     setActiveCanvas(section);
-    // Add small delay to allow render before scrolling if needed, 
-    // but usually we want to stay in place or scroll to top of that section
     setTimeout(() => {
       const id = section === 'featured' ? 'games-portfolio' : 'personal_projects';
       const element = document.getElementById(id);
@@ -63,18 +79,17 @@ function App() {
             className="navbar-toggler font-weight-bold text-white rounded"
             style={{ borderColor: 'var(--accent-cyan)', background: 'transparent' }}
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
+            onClick={() => setIsNavExpanded(!isNavExpanded)}
             aria-controls="navbarResponsive"
-            aria-expanded="false"
+            aria-expanded={isNavExpanded}
             aria-label="Toggle navigation"
           >
             Menu <i className="fas fa-bars"></i>
           </button>
-          <div className="collapse navbar-collapse" id="navbarResponsive">
+          <div className={`collapse navbar-collapse ${isNavExpanded ? 'show' : ''}`} id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
+                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about" onClick={() => setIsNavExpanded(false)}>ABOUT</a>
               </li>
               <li className="nav-item mx-0 mx-lg-1">
                 <a
@@ -83,6 +98,7 @@ function App() {
                   onClick={(e) => {
                     e.preventDefault();
                     handleSectionToggle('featured');
+                    setIsNavExpanded(false);
                   }}
                 >
                   FEATURED PROJECTS
@@ -95,13 +111,28 @@ function App() {
                   onClick={(e) => {
                     e.preventDefault();
                     handleSectionToggle('personal');
+                    setIsNavExpanded(false);
                   }}
                 >
                   PERSONAL PROJECTS
                 </a>
               </li>
               <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact" onClick={() => setIsNavExpanded(false)}>CONTACT</a>
+              </li>
+              <li className="nav-item mx-0 mx-lg-1 d-flex align-items-center">
+                <button
+                  onClick={() => {
+                    toggleTheme();
+                    setIsNavExpanded(false);
+                  }}
+                  className="btn btn-link nav-link py-3 px-0 px-lg-3 theme-toggle-btn"
+
+                  title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                  style={{ fontSize: '1.2rem' }}
+                >
+                  <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`}></i>
+                </button>
               </li>
             </ul>
           </div>
@@ -113,6 +144,7 @@ function App() {
         <Header
           onToggleSection={handleSectionToggle}
           isBotEnabled={config.enableChat}
+          theme={theme}
         />
       </header>
 

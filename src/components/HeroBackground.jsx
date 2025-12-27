@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const HeroBackground = () => {
+const HeroBackground = ({ theme }) => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -9,9 +9,22 @@ const HeroBackground = () => {
         let animationFrameId;
         let w, h;
 
+        // Get colors from CSS Variables
+        const getStyles = () => {
+            const styles = getComputedStyle(document.body);
+            return {
+                bg: styles.getPropertyValue('--bg-void').trim() || '#0B0C10',
+                accent: styles.getPropertyValue('--accent-cyan').trim() || '#66FCF1',
+                teal: styles.getPropertyValue('--accent-teal').trim() || '#45A29E',
+                text: styles.getPropertyValue('--text-primary').trim() || '#C5C6C7'
+            };
+        };
+
+        const themeColors = getStyles();
+
         // Configuration
-        const gridColor = '#45A29E'; // Teal used in theme
-        const gridSpeed = 1; // Speed of movement
+        const gridColor = themeColors.teal;
+        const gridSpeed = 1;
         const gridSpacingToVW = 0.05; // Grid spacing relative to width
 
         // Stars
@@ -60,9 +73,9 @@ const HeroBackground = () => {
 
             // Gradient fade for the grid
             const gradient = ctx.createLinearGradient(0, horizonY, 0, h);
-            gradient.addColorStop(0, 'rgba(69, 162, 158, 0)');
-            gradient.addColorStop(0.2, 'rgba(69, 162, 158, 0.2)');
-            gradient.addColorStop(1, 'rgba(102, 252, 241, 0.5)'); // Bright cyan at bottom
+            gradient.addColorStop(0, themeColors.teal + '00'); // Hex + alpha 00
+            gradient.addColorStop(0.2, themeColors.teal + '33'); // Hex + alpha 20%
+            gradient.addColorStop(1, themeColors.accent + '80'); // Hex + alpha 50%
 
             ctx.strokeStyle = gradient;
             ctx.lineWidth = 1;
@@ -147,7 +160,7 @@ const HeroBackground = () => {
                 // Calculate alpha based on distance (closer to horizon = more transparent)
                 const alpha = Math.min(1, (projectedY - horizonY) / (h - horizonY));
 
-                ctx.strokeStyle = `rgba(102, 252, 241, ${alpha * 0.5})`;
+                ctx.strokeStyle = themeColors.accent + Math.floor(alpha * 0.5 * 255).toString(16).padStart(2, '0');
 
                 ctx.beginPath();
                 ctx.moveTo(0, projectedY);
@@ -161,7 +174,7 @@ const HeroBackground = () => {
             stars.forEach(star => {
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+                ctx.fillStyle = themeColors.text + Math.floor(star.opacity * 255).toString(16).padStart(2, '0');
                 ctx.fill();
 
                 // Move stars slowly
@@ -177,9 +190,8 @@ const HeroBackground = () => {
 
         const drawParticles = () => {
             ctx.font = '10px monospace';
-            ctx.fillStyle = '#0f0'; // Matrix green or cyan? Let's use Cyan to match theme
             particles.forEach(p => {
-                ctx.fillStyle = `rgba(102, 252, 241, ${p.opacity})`;
+                ctx.fillStyle = themeColors.accent + Math.floor(p.opacity * 255).toString(16).padStart(2, '0');
                 ctx.fillText(p.val, p.x, p.y);
 
                 p.y += p.speedY;
@@ -192,7 +204,7 @@ const HeroBackground = () => {
 
         const render = () => {
             // Fill background
-            ctx.fillStyle = '#0B0C10';
+            ctx.fillStyle = themeColors.bg;
             ctx.fillRect(0, 0, w, h);
 
             drawStars();
@@ -201,9 +213,9 @@ const HeroBackground = () => {
 
             // Overlay gradient to darken the top for text contrast
             const overlay = ctx.createLinearGradient(0, 0, 0, h);
-            overlay.addColorStop(0, 'rgba(11, 12, 16, 0.8)');
-            overlay.addColorStop(0.5, 'rgba(11, 12, 16, 0.2)');
-            overlay.addColorStop(1, 'rgba(11, 12, 16, 0.0)');
+            overlay.addColorStop(0, themeColors.bg + 'CC'); // 0.8 alpha
+            overlay.addColorStop(0.5, themeColors.bg + '33'); // 0.2 alpha
+            overlay.addColorStop(1, themeColors.bg + '00'); // 0.0 alpha
             ctx.fillStyle = overlay;
             ctx.fillRect(0, 0, w, h);
 
@@ -225,7 +237,7 @@ const HeroBackground = () => {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [theme]);
 
     return (
         <canvas

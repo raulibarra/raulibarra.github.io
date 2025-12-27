@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  /* Color Palette */
+  /* Default Theme (Dark/Deep Void) */
   --bg-void: #0B0C10;
   /* Deepest background */
   --bg-surface: #1F2833;
@@ -24,6 +24,26 @@ html {
   /* Primary Action / Highlight */
   --accent-teal: #45A29E;
   /* Secondary / Muted Highlight */
+  --accent-gold: #FFD700;
+  --accent-amber: #FFA500;
+
+  --text-muted: #8892b0;
+  --text-white-50: rgba(255, 255, 255, 0.5);
+
+  /* Tint/Alpha variations */
+  --accent-cyan-tint: rgba(102, 252, 241, 0.15);
+  --accent-gold-tint: rgba(255, 215, 0, 0.1);
+
+  /* Theme Overlays & Gradients */
+  --hero-gradient: radial-gradient(circle at 50% 30%, #1f2833 0%, #0b0c10 80%);
+  --hero-overlay-dark: rgba(11, 12, 16, 0.5);
+  --hero-overlay-deeper: rgba(11, 12, 16, 0.7);
+  --hero-overlay-solid: rgba(11, 12, 16, 0.8);
+  --hero-vignette: radial-gradient(circle at center, transparent 0%, var(--bg-void) 120%);
+  --nav-blur: rgba(31, 40, 51, 0.8);
+  --hero-text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  --hero-sub-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+  --hero-text-outline: none;
 
   /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
@@ -35,6 +55,34 @@ html {
   --radius-soft: 8px;
   --radius-hard: 2px;
   /* Sci-fi feel */
+}
+
+.light-theme {
+  --bg-void: #e3e8eb;
+  --bg-surface: #ffffff;
+  --text-primary: #2d3436;
+  --text-heading: #1e272e;
+  --accent-cyan: #0b5ea7;
+  --accent-teal: #006266;
+  --accent-gold: #a67c00;
+  --accent-amber: #c0392b;
+
+  --text-muted: #636e72;
+  --text-white-50: rgba(0, 0, 0, 0.6);
+
+  /* Tint/Alpha variations */
+  --accent-cyan-tint: rgba(9, 132, 227, 0.1);
+  --accent-gold-tint: rgba(253, 203, 110, 0.15);
+
+  --hero-gradient: radial-gradient(circle at 50% 30%, #d0d7de 0%, #e3e8eb 80%);
+  --hero-overlay-dark: rgba(227, 232, 235, 0.4);
+  --hero-overlay-deeper: rgba(227, 232, 235, 0.6);
+  --hero-overlay-solid: rgba(240, 244, 248, 0.95);
+  --hero-vignette: radial-gradient(circle at center, transparent 0%, rgba(227, 232, 235, 0.9) 120%);
+  --nav-blur: rgba(240, 244, 248, 0.85);
+  --hero-text-shadow: 0 2px 4px rgba(255, 255, 255, 1);
+  --hero-sub-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  --hero-text-outline: 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.5);
 }
 
 /* Global Overrides */
@@ -100,7 +148,15 @@ a:hover {
 }
 
 .text-white {
-  color: var(--text-primary) !important;
+  color: var(--text-heading) !important;
+}
+
+.text-white-50 {
+  color: var(--text-white-50) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
 }
 
 .page-section {
@@ -194,8 +250,8 @@ a:hover {
 .hero-parallax-container {
   min-height: 100vh;
   padding-top: 80px;
-  /* Deep Slate/Dark Teal Gradient - The "Cave" */
-  background: radial-gradient(circle at 50% 30%, #1f2833 0%, #0b0c10 80%);
+  /* Use theme-aware gradient */
+  background: var(--hero-gradient);
   perspective: 1000px;
   position: relative;
   overflow: hidden;
@@ -305,12 +361,7 @@ a:hover {
   animation-delay: 0.5s;
 }
 
-/* Update Accent Colors for this theme */
-:root {
-  --accent-gold: #FFD700;
-  --accent-amber: #FFA500;
-}
-
+/* Update Accent Colors for this theme (Moved to root, but keeping class for convenience) */
 .text-accent {
   color: var(--accent-gold) !important;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
@@ -388,7 +439,7 @@ a:hover {
   height: 200%;
   background: linear-gradient(45deg,
       transparent,
-      rgba(102, 252, 241, 0.1),
+      var(--accent-cyan-tint),
       transparent);
   transform: rotate(45deg);
   animation: shine 3s infinite;
@@ -423,7 +474,7 @@ a:hover {
   border-radius: var(--radius-soft);
   margin-bottom: 1.5rem;
   border-left: 4px solid var(--accent-cyan);
-  background: rgba(102, 252, 241, 0.05);
+  background: var(--accent-cyan-tint);
   /* Tint of cyan */
   transition: transform 0.2s ease;
 }
@@ -434,7 +485,7 @@ a:hover {
 
 .info-panel.variant-primary {
   border-color: var(--accent-cyan);
-  background: linear-gradient(90deg, rgba(102, 252, 241, 0.1) 0%, rgba(11, 12, 16, 0) 100%);
+  background: linear-gradient(90deg, var(--accent-cyan-tint) 0%, transparent 100%);
 }
 
 .info-panel.variant-surface {
@@ -444,8 +495,8 @@ a:hover {
 }
 
 .info-panel.variant-gold {
-  border-color: #FFD700;
-  background: rgba(255, 215, 0, 0.05);
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-tint);
 }
 
 .info-panel p {
@@ -490,9 +541,8 @@ a:hover {
    Project Cards (Phase 2)
    ========================================= */
 .project-card {
-  background-color: rgba(31, 40, 51, 0.5);
-  /* Semi-transparent Surface */
-  border: 1px solid rgba(102, 252, 241, 0.1);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-teal);
   border-radius: var(--radius-soft);
   padding: 2rem;
   margin-bottom: 3rem;
@@ -501,8 +551,8 @@ a:hover {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border-color: rgba(102, 252, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-cyan);
 }
 
 .tech-badge {
@@ -513,9 +563,9 @@ a:hover {
   border-radius: 50px;
   font-size: 0.85rem;
   font-family: var(--font-code);
-  background: rgba(69, 162, 158, 0.1);
+  background: var(--bg-surface);
   color: var(--accent-cyan);
-  border: 1px solid rgba(69, 162, 158, 0.3);
+  border: 1px solid var(--accent-teal);
   transition: all 0.2s;
 }
 
@@ -558,7 +608,7 @@ a:hover {
 .hero-vignette {
   pointer-events: none;
   z-index: 5;
-  background: radial-gradient(circle at center, transparent 0%, var(--bg-void) 120%);
+  background: var(--hero-vignette);
 }
 
 /* Updated Profile Image */

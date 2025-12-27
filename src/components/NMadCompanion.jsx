@@ -91,20 +91,20 @@ const NMadCompanion = ({ onToggleChat }) => {
                         width: '100%',
                         height: '100%',
                         objectFit: 'contain',
-                        filter: 'drop-shadow(0 0 10px #66FCF1)',
+                        filter: 'drop-shadow(0 0 10px var(--accent-cyan))',
                         transform: 'scaleX(-1)'
                     }}
                 />
                 <div style={{
                     marginTop: '-15px',
-                    background: 'rgba(11, 12, 16, 0.8)',
-                    color: '#66FCF1',
+                    background: 'var(--hero-overlay-solid)',
+                    color: 'var(--accent-cyan)',
                     padding: '2px 8px',
                     borderRadius: '10px',
                     fontSize: '16px',
                     fontWeight: 'bold',
                     fontFamily: 'Consolas',
-                    border: '1px solid #66FCF1',
+                    border: '1px solid var(--accent-cyan)',
                     textAlign: 'center',
                     backdropFilter: 'blur(2px)'
                 }}>

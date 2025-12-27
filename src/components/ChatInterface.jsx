@@ -111,9 +111,9 @@ const ChatInterface = ({ isOpen, onClose }) => {
             right: '20px',
             width: 'min(350px, 90vw)',
             height: 'min(500px, 80vh)',
-            background: 'rgba(11, 12, 16, 0.95)',
+            background: 'var(--hero-overlay-solid)',
             backdropFilter: 'blur(10px)',
-            border: '1px solid #66FCF1',
+            border: '1px solid var(--accent-cyan)',
             borderRadius: '10px',
             display: 'flex',
             flexDirection: 'column',
@@ -124,24 +124,24 @@ const ChatInterface = ({ isOpen, onClose }) => {
             {/* Header */}
             <div style={{
                 padding: '15px',
-                borderBottom: '1px solid rgba(102, 252, 241, 0.3)',
+                borderBottom: '1px solid var(--accent-teal)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                background: 'rgba(31, 40, 51, 0.5)',
+                background: 'var(--bg-surface)',
                 borderTopLeftRadius: '10px',
                 borderTopRightRadius: '10px'
             }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <div style={{ width: '10px', height: '10px', background: '#66FCF1', borderRadius: '50%', marginRight: '10px', boxShadow: '0 0 5px #66FCF1' }}></div>
-                    <span style={{ color: '#66FCF1', fontWeight: 'bold' }}>nMaD_AI_LINK</span>
+                    <div style={{ width: '10px', height: '10px', background: 'var(--accent-cyan)', borderRadius: '50%', marginRight: '10px', boxShadow: '0 0 5px var(--accent-cyan)' }}></div>
+                    <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>nMaD_AI_LINK</span>
                 </div>
                 <button
                     onClick={onClose}
                     style={{
                         background: 'rgba(255, 255, 255, 0.1)',
                         border: '1px solid rgba(255, 255, 255, 0.2)',
-                        color: '#66FCF1',
+                        color: 'var(--accent-cyan)',
                         cursor: 'pointer',
                         fontSize: '16px',
                         width: '30px',
@@ -167,25 +167,25 @@ const ChatInterface = ({ isOpen, onClose }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '10px',
-                color: '#fff'
+                color: 'var(--text-primary)'
             }}>
                 {messages.map((msg, i) => (
                     <div key={i} style={{
                         alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
                         maxWidth: '85%',
                         padding: '10px',
-                        background: msg.role === 'user' ? 'rgba(102, 252, 241, 0.1)' : 'rgba(197, 198, 199, 0.1)',
-                        border: msg.role === 'user' ? '1px solid rgba(102, 252, 241, 0.3)' : '1px solid rgba(197, 198, 199, 0.3)',
+                        background: msg.role === 'user' ? 'var(--accent-teal)33' : 'var(--bg-surface)',
+                        border: msg.role === 'user' ? '1px solid var(--accent-cyan)' : '1px solid var(--accent-teal)',
                         borderRadius: '5px',
                         fontSize: '0.9em'
                     }}>
-                        <span style={{ color: msg.role === 'ai' ? '#66FCF1' : '#C5C6C7', fontWeight: 'bold', fontSize: '0.8em', display: 'block', marginBottom: '5px' }}>
+                        <span style={{ color: msg.role === 'ai' ? 'var(--accent-cyan)' : 'var(--text-primary)', fontWeight: 'bold', fontSize: '0.8em', display: 'block', marginBottom: '5px' }}>
                             {msg.role === 'user' ? 'USER' : 'nMaD'}
                         </span>
                         <div style={{ lineHeight: '1.4' }}>
                             <ReactMarkdown
                                 components={{
-                                    a: ({ node, ...props }) => <a style={{ color: msg.role === 'ai' ? '#fff' : '#66FCF1', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer" {...props} />,
+                                    a: ({ node, ...props }) => <a style={{ color: msg.role === 'ai' ? 'var(--text-heading)' : 'var(--accent-cyan)', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer" {...props} />,
                                     p: ({ node, ...props }) => <p style={{ margin: '0 0 10px 0' }} {...props} />,
                                     ul: ({ node, ...props }) => <ul style={{ paddingLeft: '20px', margin: '0 0 10px 0' }} {...props} />,
                                     li: ({ node, ...props }) => <li style={{ marginBottom: '5px' }} {...props} />,
@@ -198,7 +198,7 @@ const ChatInterface = ({ isOpen, onClose }) => {
                     </div>
                 ))}
                 {loading && (
-                    <div style={{ alignSelf: 'flex-start', color: '#66FCF1', fontSize: '0.8em', fontStyle: 'italic' }}>
+                    <div style={{ alignSelf: 'flex-start', color: 'var(--accent-cyan)', fontSize: '0.8em', fontStyle: 'italic' }}>
                         Processing...
                     </div>
                 )}
@@ -219,9 +219,9 @@ const ChatInterface = ({ isOpen, onClose }) => {
                     placeholder="Query Protocol..."
                     style={{
                         flex: 1,
-                        background: 'rgba(0,0,0,0.3)',
-                        border: '1px solid #45A29E',
-                        color: '#fff',
+                        background: 'var(--bg-void)',
+                        border: '1px solid var(--accent-teal)',
+                        color: 'var(--text-primary)',
                         padding: '8px',
                         borderRadius: '4px',
                         outline: 'none',
@@ -229,8 +229,8 @@ const ChatInterface = ({ isOpen, onClose }) => {
                     }}
                 />
                 <button type="submit" style={{
-                    background: '#45A29E',
-                    color: '#0b0c10',
+                    background: 'var(--accent-teal)',
+                    color: 'var(--bg-void)',
                     border: 'none',
                     padding: '0 15px',
                     borderRadius: '4px',
