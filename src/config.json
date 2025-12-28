@@ -10,5 +10,13 @@
         "puter": {
             "model": "gemini-2.5-flash-lite"
         }
+    },
+    "rateLimit": {
+        "cooldownSeconds": 3,
+        "maxMessagesPerDay": 2,
+        "ui": {
+            "dailyLimitMessage": "You've reached the daily question limit! For more inquiries, please contact Raul directly at raulibarra.a@gmail.com",
+            "cooldownMessage": "Please wait a few seconds before sending another message."
+        }
     }
 }

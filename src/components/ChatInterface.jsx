@@ -30,6 +30,21 @@ const ChatInterface = ({ isOpen, onClose }) => {
         e.preventDefault();
         if (!input.trim() || loading) return;
 
+        // RATE LIMIT CHECK
+        const { getAIProvider } = await import('../services/aiService'); // Lazy import service
+        const { rateLimitService } = await import('../services/rateLimitService');
+
+        const limitCheck = rateLimitService.checkLimits();
+        if (!limitCheck.allowed) {
+            setMessages(prev => [
+                ...prev,
+                { role: 'user', text: input }, // Show user message
+                { role: 'ai', text: `SYSTEM: ${limitCheck.error}` } // Show system error as AI message
+            ]);
+            setInput('');
+            return;
+        }
+
         const userMsgText = input;
 
         // Update UI: Add User Message + Empty AI Placeholder immediately
@@ -42,10 +57,13 @@ const ChatInterface = ({ isOpen, onClose }) => {
         setInput('');
         setLoading(true);
 
+        // Count usage attempt (or should we count only success? usually attempt to stop spam)
+        // Let's count it now to prevent spamming the API with errors
+        rateLimitService.incrementUsage();
+
         try {
             // Get the AI provider (defaulting to configured preference in aiService.js)
-            const { getAIProvider } = await import('../services/aiService');
-            const aiService = getAIProvider(import.meta.env.VITE_AI_PROVIDER);
+            const aiService = getAIProvider();
 
             const fullSystemPrompt = `${aiConfig.prompt}\n\nCONTEXT:\n${aiConfig.context}`;
             const historyExcludingCurrent = messages; // The current user message is passed separately in some providers, but here we just need history

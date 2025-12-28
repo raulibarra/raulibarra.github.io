@@ -15,8 +15,6 @@ export const revealKeyForUser = () => {
 
 export const getAIProvider = (providerName) => {
     // Priority: Explicit Argument > Config.json Preference > Default 'puter'
-    // Note: ChatInterface passes `import.meta.env.VITE_AI_PROVIDER` as the argument.
-    // If that env var is unset, it passes undefined, so we fall back to config.
     const name = providerName || config.ai.preferredProvider || 'puter';
 
     switch (name.toLowerCase()) {

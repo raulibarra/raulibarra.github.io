@@ -1,7 +1,7 @@
 export class GeminiProvider {
     constructor(config) {
         this.config = config;
-        this.apiKey = this.revealKey(config.obfuscatedKey) || import.meta.env.VITE_GEMINI_API_KEY;
+        this.apiKey = this.revealKey(config.obfuscatedKey) || '';
     }
 
     revealKey(obfuscatedKey) {
