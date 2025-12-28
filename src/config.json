@@ -1,3 +1,14 @@
 {
-    "enableChat": true
+    "enableChat": true,
+    "ai": {
+        "preferredProvider": "gemini",
+        "gemini": {
+            "model": "gemini-2.5-flash-lite",
+            "apiUrl": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
+            "obfuscatedKey": "b3hKcmx6Vk9XSlJSMUNZeTgtS3hnbGZKNGlhSG4teVlEeVNheklB"
+        },
+        "puter": {
+            "model": "gemini-2.5-flash-lite"
+        }
+    }
 }

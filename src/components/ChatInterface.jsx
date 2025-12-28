@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { puter } from '@heyputer/puter.js';
+
 import systemPromptRaw from '../data/system_prompt.txt?raw';
 import contextRaw from '../data/chatbotcontext.dat?raw';
 
@@ -32,9 +32,6 @@ const ChatInterface = ({ isOpen, onClose }) => {
 
         const userMsgText = input;
 
-        // Prepare history for API (current history + new user message)
-        const historyForApi = [...messages, { role: 'user', text: userMsgText }];
-
         // Update UI: Add User Message + Empty AI Placeholder immediately
         setMessages(prev => [
             ...prev,
@@ -46,36 +43,23 @@ const ChatInterface = ({ isOpen, onClose }) => {
         setLoading(true);
 
         try {
-            // Construct messages array for Puter API
-            const apiMessages = [
-                {
-                    role: 'system',
-                    content: `${aiConfig.prompt}\n\nCONTEXT:\n${aiConfig.context}`
-                }
-            ];
+            // Get the AI provider (defaulting to configured preference in aiService.js)
+            const { getAIProvider } = await import('../services/aiService');
+            const aiService = getAIProvider(import.meta.env.VITE_AI_PROVIDER);
 
-            // Map message history
-            historyForApi.forEach(msg => {
-                apiMessages.push({
-                    role: msg.role === 'ai' ? 'assistant' : 'user',
-                    content: msg.text
-                });
-            });
+            const fullSystemPrompt = `${aiConfig.prompt}\n\nCONTEXT:\n${aiConfig.context}`;
+            const historyExcludingCurrent = messages; // The current user message is passed separately in some providers, but here we just need history
 
-            // Call Puter.js with streaming enabled
-            const response = await puter.ai.chat(apiMessages, {
-                model: 'gemini-2.5-flash',
-                stream: true
-            });
+            // Reconstruct full message history including the new user message for the API
+            const fullHistory = [...historyExcludingCurrent, { role: 'user', text: userMsgText }];
+
+            const responseStream = aiService.chatStream(fullHistory, fullSystemPrompt);
 
             let fullText = '';
 
-            // Process the stream
-            for await (const part of response) {
-                const chunk = part?.text || '';
+            for await (const chunk of responseStream) {
                 fullText += chunk;
 
-                // Update the last message (AI placeholder) with accumulated text
                 setMessages(prev => {
                     const updated = [...prev];
                     const lastIndex = updated.length - 1;
@@ -88,12 +72,11 @@ const ChatInterface = ({ isOpen, onClose }) => {
 
         } catch (error) {
             console.error("AI Error:", error);
-            // Update placeholder with error
             setMessages(prev => {
                 const updated = [...prev];
                 const lastIndex = updated.length - 1;
                 if (updated[lastIndex].role === 'ai') {
-                    updated[lastIndex] = { ...updated[lastIndex], text: "ERR: Connection instability. Please try again." };
+                    updated[lastIndex] = { ...updated[lastIndex], text: `ERR: ${error.message || "Connection instability"}` };
                 }
                 return updated;
             });
