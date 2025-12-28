@@ -6,19 +6,15 @@ const About = () => {
             {/* About Section Content */}
             <div className="row">
                 {/* Profile Column */}
-                {/* Profile Column */}
                 <div className="col-lg-4 ml-auto text-center text-lg-left" style={{ position: 'sticky', top: '100px', height: 'fit-content', zIndex: 100 }}>
                     <div className="info-panel variant-surface p-4 text-center text-lg-left">
                         <div className="profile-image-container mb-4 d-inline-block position-relative">
-                            <img className="img-fluid profile-image mb-2" src="assets/img/FotoPromoRaul.JPG" alt="Raul Ibarra Aranda" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
-                            <div className="status-badge text-accent font-code small mt-2">
-                                <span className="mr-2">●</span>Open to Work
-                            </div>
+                            <img className="img-fluid profile-image" src="assets/img/FotoPromoRaul.JPG" alt="Raul Ibarra Aranda" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
                         </div>
 
                         <div className="profile-header mb-4">
                             <h2 className="h4 text-white mb-1">Raul Ibarra Aranda</h2>
-                            <p className="text-accent font-code mb-0">Game Developer</p>
+                            <p className="text-accent font-code mb-0">Senior Game Developer</p>
                         </div>
 
                         <div className="contact-info">

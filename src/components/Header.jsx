@@ -62,18 +62,6 @@ const Header = ({ onToggleSection, isBotEnabled, theme }) => {
                     Engineering <span className="text-accent">Immersive Gameplay</span> & <span className="text-accent">Scalable Systems</span>
                 </h3>
 
-                <div className="status-badge text-accent font-code mb-4 animate-fadeIn px-4 py-2 d-inline-block rounded-pill shadow-lg" style={{
-                    textShadow: 'var(--hero-sub-shadow)',
-                    webkitTextStroke: 'var(--hero-text-outline)',
-                    fontWeight: 700,
-                    fontSize: '1.2rem',
-                    background: 'var(--hero-overlay-dark)',
-                    border: '1.5px solid var(--accent-cyan)',
-                    backdropFilter: 'blur(8px)'
-                }}>
-                    <span className="me-2" style={{ color: '#00ff88', fontSize: '1.4rem' }}>●</span> AVAILABLE FOR NEW OPPORTUNITIES
-                </div>
-
                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                     <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger"
                         href="#games-portfolio"

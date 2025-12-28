@@ -174,6 +174,19 @@ a:hover {
   color: var(--accent-cyan);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  #mainNav .navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  #mainNav .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
@@ -389,9 +402,70 @@ a:hover {
   color: var(--text-heading);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+
+  /* Adjust container padding */
+  .hero-parallax-container {
+    padding-top: 80px !important;
+    min-height: 100dvh !important;
+  }
+
+  /* Distribute content with better grouping for tablets/mobile */
+  .hero-content-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Group centered instead of spreading evenly */
+    gap: 2rem;
+    /* Consistent spacing */
+    min-height: 60vh;
+    width: 100%;
+  }
+
+  /* Reset margins to allow flex distribution to work */
+  .hero-content-wrapper>* {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  /* Ensure hero buttons stay side-by-side on mobile */
+  .hero-content-wrapper .btn-lg {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.85rem !important;
+    width: auto !important;
+    min-width: 140px;
+    margin: 0.25rem !important;
+    display: inline-block !important;
+  }
+
+  /* Shrink status badge on mobile */
+  .status-badge {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 1rem !important;
+    white-space: nowrap;
+  }
+
+  .status-badge span {
+    font-size: 1rem !important;
+  }
+
+  /* Specific small mobile tweaks */
+  @media (max-width: 576px) {
+    .hero-content-wrapper {
+      gap: 1.5rem;
+      min-height: 75vh;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+    }
   }
 }
 
