@@ -878,3 +878,299 @@ a:hover {
     margin-top: 0 !important;
   }
 }
+
+/* =========================================
+   Hero Section Enhancements (AAA Recruiter Focused)
+   ========================================= */
+
+/* Availability Badge */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00ff88;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 136, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  animation: badge-glow 2s ease-in-out infinite;
+}
+
+/* Light theme: Darker green for better contrast */
+.light-theme .availability-badge {
+  color: #00a859;
+  background: rgba(0, 168, 89, 0.15);
+  border-color: rgba(0, 168, 89, 0.5);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.light-theme .availability-badge .badge-dot {
+  background: #00a859;
+  box-shadow: 0 0 8px #00a859;
+}
+
+.availability-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: dot-pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 8px #00ff88;
+}
+
+@keyframes badge-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  }
+}
+
+@keyframes dot-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Stats Banner */
+.hero-stats-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--hero-overlay-solid);
+  border: 1px solid var(--accent-teal);
+  border-radius: var(--radius-soft);
+  padding: 16px 32px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+.stat-label {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--accent-teal), transparent);
+}
+
+/* Company Logo Strip */
+.company-logo-strip {
+  margin-top: 1rem;
+}
+
+.logo-strip-label {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+}
+
+.logo-strip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  background: var(--hero-overlay-solid);
+  border-radius: var(--radius-soft);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.5);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Fallback: Invert logos when theme-specific version doesn't exist */
+.logo-item img.inverted {
+  filter: grayscale(100%) brightness(1.5) invert(1);
+}
+
+.logo-item:hover img.inverted {
+  filter: grayscale(0%) brightness(1) invert(1) hue-rotate(180deg);
+}
+
+
+/* Resume Request Button */
+.btn-resume-request {
+  position: relative;
+  border-color: #00ff88 !important;
+  color: #00ff88 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.btn-resume-request:hover {
+  background-color: rgba(0, 255, 136, 0.1) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+/* Light theme: Darker green for better contrast */
+.light-theme .btn-resume-request {
+  border-color: #00a859 !important;
+  color: #00a859 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.light-theme .btn-resume-request:hover {
+  background-color: rgba(0, 168, 89, 0.15) !important;
+  box-shadow: 0 0 20px rgba(0, 168, 89, 0.3);
+}
+
+/* Mobile Responsive for Hero Enhancements */
+@media (max-width: 768px) {
+  .availability-badge {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .hero-stats-banner {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .stat-item {
+    padding: 0 12px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .stat-divider {
+    height: 30px;
+  }
+
+  .logo-strip-container {
+    gap: 16px;
+    padding: 12px 16px;
+  }
+
+  .logo-item {
+    width: 60px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-stats-banner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .stat-item {
+    padding: 8px 0;
+  }
+
+  .logo-strip-container {
+    gap: 12px;
+  }
+
+  .logo-item {
+    width: 50px;
+    height: 25px;
+  }
+}
+
+/* Landscape Mobile for Hero Enhancements */
+@media (max-height: 600px) and (orientation: landscape) {
+  .availability-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-stats-banner {
+    padding: 8px 16px;
+    margin-bottom: 1rem !important;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+  }
+
+  .company-logo-strip {
+    display: none;
+  }
+
+}

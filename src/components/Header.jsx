@@ -1,7 +1,47 @@
 
-
 import HeroBackground from './HeroBackground';
-const Header = ({ onToggleSection, isBotEnabled, theme }) => {
+
+// Company logos for credibility strip with theme variants
+const companyLogos = [
+    {
+        name: 'DeNA',
+        srcDark: './assets/img/company-logos/dena-logo.png',
+    },
+    {
+        name: 'Wizards of the Coast',
+        srcDark: './assets/img/company-logos/WizardsOfTheCoastLogo.png',
+    },
+    {
+        name: 'Disney',
+        srcDark: './assets/img/company-logos/disney-logo.png',
+    },
+    {
+        name: 'Warner Bros Games',
+        srcDark: './assets/img/company-logos/warner-bros-games.png',
+    },
+    {
+        name: 'nWay',
+        srcDark: './assets/img/company-logos/nway_logo.png',
+        srcLight: './assets/img/company-logos/nway_logo-light.png'
+    },
+    {
+        name: 'Netflix Games',
+        srcDark: './assets/img/company-logos/netflix-games.png',
+        srcLight: './assets/img/company-logos/netflix-games-light.png'
+    },
+    {
+        name: 'Niantic',
+        srcDark: './assets/img/company-logos/niantic-logo.png'
+    },
+];
+
+const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage }) => {
+
+    const handleResumeRequest = () => {
+        if (onOpenChatWithMessage) {
+            onOpenChatWithMessage("Hi! I'm a recruiter interested in learning more about Raul's experience. Could you tell me about his background and how I can request a tailored resume?");
+        }
+    };
 
     return (
         <div className="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden" style={{ minHeight: '100vh' }}>
@@ -81,6 +121,49 @@ const Header = ({ onToggleSection, isBotEnabled, theme }) => {
                     >
                         <i className="fas fa-paper-plane me-2"></i> CONTACT ME
                     </a>
+                </div>
+
+                {/* Company Logo Strip */}
+                <div className="company-logo-strip">
+                    <p className="logo-strip-label mb-2">Contributed to projects for</p>
+                    <div className="logo-strip-container">
+                        {companyLogos.map((logo, index) => {
+                            const isLightTheme = theme === 'light';
+
+                            // Determine which source to use
+                            let src, useFallback;
+
+                            if (isLightTheme) {
+                                // Light theme: prefer srcLight, fallback to srcDark inverted
+                                if (logo.srcLight) {
+                                    src = logo.srcLight;
+                                    useFallback = false;
+                                } else {
+                                    src = logo.srcDark;
+                                    useFallback = true;
+                                }
+                            } else {
+                                // Dark theme: prefer srcDark, fallback to srcLight inverted
+                                if (logo.srcDark) {
+                                    src = logo.srcDark;
+                                    useFallback = false;
+                                } else {
+                                    src = logo.srcLight;
+                                    useFallback = true;
+                                }
+                            }
+
+                            return (
+                                <div key={index} className="logo-item" title={logo.name}>
+                                    <img
+                                        src={src}
+                                        alt={logo.name}
+                                        className={useFallback ? 'inverted' : ''}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 
