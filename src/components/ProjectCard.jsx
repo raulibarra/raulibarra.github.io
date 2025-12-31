@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({ project, layout }) => {
+const ProjectCard = ({ project, layout, theme }) => {
     const isPersonal = layout === 'personal';
     const labelText = isPersonal ? '🎮 Playable Demo' : (project.demoLabel || '🎮 Demo Reel');
 
@@ -10,6 +10,27 @@ const ProjectCard = ({ project, layout }) => {
     // Embed height: Itch.io widgets are usually shorter (167px) than YouTube videos.
     // We can pass a prop or determine it.
     const embedHeight = project.embedHeight || (isPersonal ? '167' : null);
+
+    // Build the embed URL with theme parameter for itch.io embeds
+    const getEmbedSrc = () => {
+        const baseUrl = project.embedSrc;
+
+        // Check if it's an itch.io embed
+        if (baseUrl && baseUrl.includes('itch.io/embed/')) {
+            // Only add dark=true when in dark mode, omit parameter in light mode
+            if (theme === 'dark') {
+                const separator = baseUrl.includes('?') ? '&' : '?';
+                return `${baseUrl}${separator}dark=true`;
+            }
+            // In light mode, return the base URL without the dark parameter
+            return baseUrl;
+        }
+
+        // For non-itch.io embeds (like YouTube), return as-is
+        return baseUrl;
+    };
+
+    const embedSrc = getEmbedSrc();
 
     return (
         <div className="project-card">
@@ -23,6 +44,21 @@ const ProjectCard = ({ project, layout }) => {
                     <h5 className="text-accent mb-0">{labelText}</h5>
                 </div>
             </div>
+
+            {/* Metrics Section - Optional quantified achievements */}
+            {project.metrics && project.metrics.length > 0 && (
+                <div className="project-metrics mb-4">
+                    {project.metrics.map((metric, index) => (
+                        <div key={index} className="metric-badge">
+                            <span className="metric-icon">{metric.icon || '📊'}</span>
+                            <div className="metric-content">
+                                <span className="metric-value">{metric.value}</span>
+                                <span className="metric-label">{metric.label}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
 
             <div className="row">
                 {/* Left column: Project details */}
@@ -66,10 +102,11 @@ const ProjectCard = ({ project, layout }) => {
                     {isPersonal ? (
                         <div className="mb-3 embed-container">
                             <iframe
+                                key={`${project.id}-${theme}`}
                                 width="100%"
                                 height={embedHeight}
                                 frameBorder="0"
-                                src={project.embedSrc}
+                                src={embedSrc}
                                 title={project.title}
                                 loading="lazy"
                                 sandbox="allow-scripts allow-same-origin allow-popups allow-pointer-lock allow-forms"
@@ -80,7 +117,8 @@ const ProjectCard = ({ project, layout }) => {
                     ) : (
                         <div className="media-wrapper">
                             <iframe
-                                src={project.embedSrc}
+                                key={`${project.id}-${theme}`}
+                                src={embedSrc}
                                 title={project.title}
                                 loading="lazy"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

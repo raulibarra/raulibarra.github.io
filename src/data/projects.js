@@ -8,6 +8,11 @@ export const featuredProjects = [
         company: "Tomorrow Media / Tevaera",
         teamSize: "5+ including 3 devs",
         tech: ["Unity 6.2", "C#", "Photon Quantum", "ECS", "Addressables"],
+        // Optional: Add quantified metrics/achievements
+        metrics: [
+            { icon: "⚡", value: "8 Players", label: "Multiplayer" },
+            { icon: "🌐", value: "WebGL", label: "Platform" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Weapons System:", text: "Built the entire ECS-based multiplayer weapons system using Photon Quantum, handling fire rates, burst patterns, and ammo management." },
@@ -32,6 +37,10 @@ export const featuredProjects = [
         company: "Redemption Games Inc.",
         teamSize: "10+ including 6 devs",
         tech: ["Unity", "C#", "Photon Quantum", "Firebase"],
+        metrics: [
+            { icon: "📥", value: "10k+", label: "Installs" },
+            { icon: "⚡", value: "30%", label: "Performance Boost" },
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Core Gameplay Features:", text: "Prototyped key systems like Home panel tabs, Post Level Win/Lose sequences, and the Trophy Road progression system." },
@@ -53,10 +62,15 @@ export const featuredProjects = [
         title: "Power Rangers: Morphin Legends",
         subtitle: "Turn-Based RPG with Data-Driven Systems",
         demoLabel: "🎮 Demo Reel",
-        role: "Senior Game Developer (Contractor)",
+        role: "Senior Game Developer",
         company: "nWay Inc.",
         teamSize: "15+ including 7 devs",
         tech: ["Unity", "C#", "Data-Driven Architecture"],
+        metrics: [
+            { icon: "📥", value: "50k+", label: "Installs" },
+            { icon: "⚡", value: "50%", label: "Less Debug Time" },
+            { icon: "💾", value: "30%", label: "Memory Saved" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Abilities System Refactor:", text: "Restructured prototype system for reusability and unit testing." },
@@ -81,6 +95,11 @@ export const featuredProjects = [
         company: "Giant Monkey Robot",
         teamSize: "15+ including 6 devs",
         tech: ["Unity", "C#", "NodeJS", "Redis"],
+        metrics: [
+            { icon: "📥", value: "10M+", label: "Installs" },
+            { icon: "📈", value: "+30%", label: "Active Players" },
+            { icon: "⚔️", value: "Raid Boss", label: "Key Feature" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Complex Ability System:", text: "Expanded data-driven ability system with chained/conditional effects and enhanced editor tools." },
@@ -105,6 +124,11 @@ export const featuredProjects = [
         company: "Utopic Studio Spa",
         teamSize: "5 including 2 devs",
         tech: ["Unity", "Google Cardboard", "C#", "Steam Audio"],
+        metrics: [
+            { icon: "🥽", value: "VR", label: "Platform" },
+            { icon: "♾️", value: "Infinite", label: "Scrolling Map" },
+            { icon: "🔄", value: "5x", label: "Replayability" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Infinite Scrolling System:", text: "Built dynamic map generation with spline-based movement." },
@@ -129,6 +153,11 @@ export const featuredProjects = [
         company: "DeNa Santiago",
         teamSize: "20+ including 7 devs",
         tech: ["Unity", "C#", "NodeJS", "Custom Shaders"],
+        metrics: [
+            { icon: "📥", value: "1M+", label: "Installs" },
+            { icon: "⚡", value: "50%", label: "Faster Loading" },
+            { icon: "⚔️", value: "Raid Boss", label: "Multi-Player" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Fog of War System:", text: "Built a custom shader-based visibility system revealing areas in real-time." },
@@ -153,6 +182,11 @@ export const featuredProjects = [
         company: "DeNa Santiago",
         teamSize: "60+ including 8 devs",
         tech: ["Unity", "C#", "Custom Shaders", "ETC Compression"],
+        metrics: [
+            { icon: "📥", value: "1M+", label: "Installs" },
+            { icon: "🗜️", value: "35%", label: "Smaller APK" },
+            { icon: "⚡", value: "OpenGL 2.0", label: "Optimized" }
+        ],
         keyFeaturesTitle: "Key Contributions",
         keyPoints: [
             { strong: "Data-Driven Abilities:", text: "Expanded system for towers/chars with instant stat changes and AOE mechanics." },
@@ -177,6 +211,11 @@ export const personalProjects = [
         subtitle: "Third-Person Open-World Prototype with Adaptive Audio",
         focus: "Character Systems & AI Programming",
         tech: ["Unity", "C#", "Mecanim", "Wwise", "Google Resonance"],
+        metrics: [
+            { icon: "🗺️", value: "5 Biomes", label: "Open World" },
+            { icon: "🎧", value: "Wwise + Resonance", label: "Spatial Audio" },
+            { icon: "🎵", value: "Adaptive", label: "Music System" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Modular Character System:", text: "Architected a flexible character framework supporting stats, weapon mechanics, and AI behaviors for both player and enemies." },
@@ -185,7 +224,7 @@ export const personalProjects = [
             { strong: "Interactive Audio:", text: "Engineered terrain-detection footsteps, material-based weapon impacts, and Wwise-powered adaptive music." },
             { strong: "Biome-Based Design:", text: "Created 5 open-world environments with spatial audio using Google Resonance and time-of-day cycles." }
         ],
-        embedSrc: "https://itch.io/embed/3710091?dark=true",
+        embedSrc: "https://itch.io/embed/3710091",
         embedLinkText: "Echoes of the Forgotten Isle",
         embedLinkUrl: "https://gamingsoft.itch.io/echoes-of-the-forgotten-isle",
         mediaDescription: "Explore an open-world prototype with modular character systems and adaptive audio. Experience terrain-aware interactions and intelligent enemy AI.",
@@ -201,6 +240,11 @@ export const personalProjects = [
         subtitle: "2.5D Online Multiplayer Arena Combat",
         focus: "Multiplayer Networking & Audio",
         tech: ["Unity", "C#", "Photon Quantum"],
+        metrics: [
+            { icon: "⏱️", value: "20 Days", label: "Dev Time" },
+            { icon: "👥", value: "6 Players", label: "Multiplayer" },
+            { icon: "🎵", value: "Original", label: "Music & SFX" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Multiplayer Arena Combat:", text: "Created a 6-player arena with wave-based spawning and real-time combat mechanics." },
@@ -208,7 +252,7 @@ export const personalProjects = [
             { strong: "Dynamic Difficulty:", text: "Built a progressive wave system that increases challenge and rewards." },
             { strong: "Adaptive Audio:", text: "Designed dynamic music transitions responding to gameplay intensity." }
         ],
-        embedSrc: "https://itch.io/embed/3053062?bg_color=222222&fg_color=eeeeee&border_color=363636",
+        embedSrc: "https://itch.io/embed/3053062",
         embedLinkText: "Spooky Arena",
         embedLinkUrl: "https://gamingsoft.itch.io/spooky-arena",
         mediaDescription: "Fast-paced 6-player arena combat where strategy meets reflexes. Battle waves of enemies while competing against other players.",
@@ -223,6 +267,11 @@ export const personalProjects = [
         subtitle: "3D FPS with Interactive Audio Systems",
         focus: "C++ Programming & Audio Systems",
         tech: ["Unreal Engine", "C++", "Blueprints", "MetaSounds"],
+        metrics: [
+            { icon: "🔧", value: "C++ & BP", label: "Dual Scripting" },
+            { icon: "🤖", value: "3 AI Types", label: "Behavior Trees" },
+            { icon: "🎧", value: "Metasounds", label: "Procedural Audio" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Core FPS Mechanics:", text: "Implemented aiming, shooting, projectile physics, and VFX systems using C++." },
@@ -230,7 +279,7 @@ export const personalProjects = [
             { strong: "Interactive Audio:", text: "Created MetaSounds-powered dynamic music that intensifies during combat." },
             { strong: "Player Progression:", text: "Built stats tracking for damage, kills, and health with an intuitive HUD." }
         ],
-        embedSrc: "https://itch.io/embed/1784074?dark=true",
+        embedSrc: "https://itch.io/embed/1784074",
         embedLinkText: "Simple FPS & MetaSounds Demo",
         embedLinkUrl: "https://gamingsoft.itch.io/simple-fps-metasounds-demo",
         mediaDescription: "Immersive third-person combat with intelligent enemies that adapt to your tactics. The music intensifies as battles heat up.",
@@ -246,6 +295,11 @@ export const personalProjects = [
         subtitle: "Enhanced Asteroids with D.O.T.S. Performance System",
         focus: "Performance Optimization & D.O.T.S.",
         tech: ["Unity", "C#", "D.O.T.S.", "ECS"],
+        metrics: [
+            { icon: "⚡", value: "D.O.T.S.", label: "ECS System" },
+            { icon: "🎵", value: "Original", label: "Music & SFX" },
+            { icon: "🔧", value: "Pooling", label: "Optimized" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "High-Performance D.O.T.S.:", text: "Implemented Unity's Data-Oriented Technology Stack for optimal performance with hundreds of entities." },
@@ -253,7 +307,7 @@ export const personalProjects = [
             { strong: "Optimized Audio:", text: "Built a pooled audio system for efficient SFX playback and composed original music." },
             { strong: "Smart Object Pooling:", text: "Implemented object pooling for bullets and effects to reduce garbage collection." }
         ],
-        embedSrc: "https://itch.io/embed/1392077?dark=true",
+        embedSrc: "https://itch.io/embed/1392077",
         embedLinkText: "Asteroids Game Demo",
         embedLinkUrl: "https://gamingsoft.itch.io/asteroids-game-demo",
         mediaDescription: "Classic space shooter with modern enhancements. Collect weapon upgrades and experience smooth performance with hundreds of asteroids.",
@@ -268,6 +322,11 @@ export const personalProjects = [
         subtitle: "Physics-Based Platformer with Cinematic Systems",
         focus: "Cinematic Tools & Physics Systems",
         tech: ["Unity", "C#", "Cinemachine", "Timeline"],
+        metrics: [
+            { icon: "🎬", value: "Cinemachine", label: "Camera System" },
+            { icon: "⏱️", value: "Timeline", label: "Sequences" },
+            { icon: "🎵", value: "Beat-Synced", label: "Music System" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Advanced Camera Systems:", text: "Implemented Cinemachine for smooth player tracking, confinement, and camera shake." },
@@ -275,7 +334,7 @@ export const personalProjects = [
             { strong: "Cinematic Storytelling:", text: "Developed in-game cutscenes using Unity Timeline and dialogue systems." },
             { strong: "Optimized Audio:", text: "Built a pooled audio manager with intro-loop music systems." }
         ],
-        embedSrc: "https://itch.io/embed/455929?dark=true",
+        embedSrc: "https://itch.io/embed/455929",
         embedLinkText: "2D Funky Platformer Audio Demo",
         embedLinkUrl: "https://gamingsoft.itch.io/2d-funky-platformer-demo",
         mediaDescription: "Adventure through dynamic environments with realistic water physics. Follow the story through interactive cutscenes.",
@@ -291,6 +350,11 @@ export const personalProjects = [
         subtitle: "Backend-Integrated Infinite Jumper with Anti-Cheat Systems",
         focus: "Backend Integration & Security",
         tech: ["Unity", "C#", "PlayFab", "Node.js"],
+        metrics: [
+            { icon: "☁️", value: "PlayFab", label: "Backend + Leaderboards" },
+            { icon: "♾️", value: "Infinite", label: "Runner System" },
+            { icon: "🎮", value: "Chiptune", label: "Folk Fusion" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Secure Backend Architecture:", text: "Integrated PlayFab with custom cloud functions for anti-cheat score validation." },
@@ -298,7 +362,7 @@ export const personalProjects = [
             { strong: "Dynamic Remote Configuration:", text: "Implemented PlayFab-driven remote parameters for difficulty and balance." },
             { strong: "Complete UI/UX:", text: "Designed integrated leaderboards, player progression, and energy systems." }
         ],
-        embedSrc: "https://itch.io/embed/482032?dark=true",
+        embedSrc: "https://itch.io/embed/482032",
         embedLinkText: "Slippery Logs",
         embedLinkUrl: "https://gamingsoft.itch.io/slippery-logs",
         mediaDescription: "Endless jumping action with global leaderboards and real-time competition. Scores are validated server-side.",
@@ -314,6 +378,11 @@ export const personalProjects = [
         subtitle: "Customizable Romance Game with Dynamic Storytelling",
         focus: "Custom Content & Narrative Systems",
         tech: ["Unity", "C#", "Custom Tools"],
+        metrics: [
+            { icon: "🎨", value: "Customizable", label: "Characters & Story" },
+            { icon: "🎵", value: "Adaptive", label: "Music Themes" },
+            { icon: "💝", value: "Shareable", label: "Experience" }
+        ],
         keyFeaturesTitle: "Key Features",
         keyPoints: [
             { strong: "Dynamic Customization:", text: "Created a content editor for personalized titles, sprites, and messages." },
@@ -321,7 +390,7 @@ export const personalProjects = [
             { strong: "Adaptive Audio:", text: "Developed character-specific music themes that change based on choices." },
             { strong: "UI/UX Design:", text: "Designed intuitive navigation and emotional feedback systems." }
         ],
-        embedSrc: "https://itch.io/embed/577853?dark=true",
+        embedSrc: "https://itch.io/embed/577853",
         embedLinkText: "Your Love as a Gift",
         embedLinkUrl: "https://gamingsoft.itch.io/your-love-as-a-gift",
         mediaDescription: "A heartfelt interactive experience. Customize everything from characters to messages for a truly personal adventure.",

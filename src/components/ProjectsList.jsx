@@ -18,7 +18,8 @@ const PortfolioSection = ({
     description,
     toggleLabel,
     toggleIcon,
-    onToggle
+    onToggle,
+    theme
 }) => (
     <section className="page-section portfolio text-white" id={id}>
         <div className="container">
@@ -39,7 +40,7 @@ const PortfolioSection = ({
             {/* Project Grid */}
             <div className="portfolio-grid">
                 {projects.map(project => (
-                    <ProjectCard key={project.id} project={project} layout={layout} />
+                    <ProjectCard key={project.id} project={project} layout={layout} theme={theme} />
                 ))}
             </div>
 
@@ -63,7 +64,7 @@ const PortfolioSection = ({
     </section>
 );
 
-const ProjectsList = ({ activeSection, onToggleSection }) => {
+const ProjectsList = ({ activeSection, onToggleSection, theme }) => {
     return (
         <>
             {activeSection === 'featured' && (
@@ -75,6 +76,7 @@ const ProjectsList = ({ activeSection, onToggleSection }) => {
                     toggleLabel="Personal Projects"
                     toggleIcon="bi-controller"
                     onToggle={() => onToggleSection('personal')}
+                    theme={theme}
                 />
             )}
 
@@ -88,6 +90,7 @@ const ProjectsList = ({ activeSection, onToggleSection }) => {
                     toggleLabel="Featured Projects"
                     toggleIcon="bi-arrow-left-circle"
                     onToggle={() => onToggleSection('featured')}
+                    theme={theme}
                 />
             )}
         </>
