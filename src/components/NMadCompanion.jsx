@@ -1,63 +1,36 @@
 import React, { useState, useEffect } from 'react';
 
-// Using a standard CSS implementation for smoother 2D sprite movement
-// This removes the 3D canvas overhead just for a 2D sprite
+// Bot now stays fixed on the right side to avoid interfering with hero content
 const NMadCompanion = ({ onToggleChat }) => {
-    const [scrollY, setScrollY] = useState(0);
     const [style, setStyle] = useState({});
 
     useEffect(() => {
-        const handleScroll = () => {
-            const y = window.scrollY;
-            setScrollY(y);
-
+        const handleResize = () => {
             const isCompactMode = window.innerWidth < 768 || window.innerHeight < 750;
 
             if (isCompactMode) {
-                // Mobile/Short Screen: Fixed in bottom-right corner to avoid overlap
+                // Mobile/Short Screen: Fixed in bottom-right corner
                 setStyle({
                     bottom: '5%',
-                    left: '85%',
-                    transform: 'translate(-50%, 0) scale(0.8)', // Smaller on mobile
+                    right: '5%',
+                    transform: 'scale(0.8)', // Smaller on mobile
                 });
-                return;
+            } else {
+                // Desktop: Always on the right side at middle height
+                setStyle({
+                    top: '50%',
+                    right: '20px',
+                    transform: 'translateY(-50%)', // Center vertically
+                });
             }
-
-            // Desktop Logic: Move from Hero (Center Bottom) to Sidebar (Right Middle)
-            const threshold = window.innerHeight * 0.8;
-            const progress = Math.min(y / threshold, 1);
-
-            // Easing
-            const ease = progress * (2 - progress); // EaseOutQuad
-
-            // We'll use fixed positioning and lerp values
-            const startBottom = 22; // % (Raised to clear scroll indicator)
-            const endBottom = 50; // %
-
-            const startLeft = 50; // %
-            const endLeft = 95; // %
-
-            const currentBottom = startBottom + (endBottom - startBottom) * ease;
-            const currentLeft = startLeft + (endLeft - startLeft) * ease;
-
-            // Scale decrease slightly when docked
-            const scale = 1.0 - (ease * 0.2);
-
-            setStyle({
-                bottom: `${currentBottom}%`,
-                left: `${currentLeft}%`,
-                transform: `translate(-50%, 50%) scale(${scale})`, // Centering pivot
-            });
         };
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
+        window.addEventListener('resize', handleResize);
         // Initial calc
-        handleScroll();
+        handleResize();
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleScroll);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 

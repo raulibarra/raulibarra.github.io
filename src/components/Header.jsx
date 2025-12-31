@@ -66,15 +66,22 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
             <div className="text-center position-relative hero-content-wrapper"
                 style={{
                     zIndex: 10,
-                    marginTop: isBotEnabled ? '-20vh' : '0',
+                    marginTop: isBotEnabled ? '-10vh' : '0',
                     transition: 'margin-top 0.5s ease'
                 }}>
-                <h1 className="hero-title mb-4" style={{
+
+                {/* Availability Badge */}
+                <div className="availability-badge mb-3">
+                    <span className="badge-dot"></span>
+                    <span>Available for Contract / Full-Time</span>
+                </div>
+
+                <h1 className="hero-title mb-3" style={{
                     textShadow: 'var(--hero-text-shadow)',
                     fontWeight: 800
                 }}>RAUL IBARRA ARANDA</h1>
 
-                <div className="hero-subtitle-container mb-4">
+                <div className="hero-subtitle-container mb-3">
                     <span className="hero-subtitle text-accent font-code" style={{
                         textShadow: 'var(--hero-sub-shadow)',
                         webkitTextStroke: 'var(--hero-text-outline)',
@@ -94,15 +101,34 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                     }}>AI Specialist</span>
                 </div>
 
-                <h3 className="text-white mb-5 font-weight-bold" style={{
+                {/* Stats Banner */}
+                <div className="hero-stats-banner mb-4">
+                    <div className="stat-item">
+                        <span className="stat-number">12+</span>
+                        <span className="stat-label">Years Experience</span>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat-item">
+                        <span className="stat-number">14</span>
+                        <span className="stat-label">Shipped Titles</span>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat-item">
+                        <span className="stat-number">6+</span>
+                        <span className="stat-label">Major IPs</span>
+                    </div>
+                </div>
+
+                <h4 className="text-white mb-4 font-weight-bold" style={{
                     textShadow: 'var(--hero-sub-shadow)',
                     webkitTextStroke: 'var(--hero-text-outline)',
                     fontWeight: 700
                 }}>
                     Engineering <span className="text-accent">Immersive Gameplay</span> & <span className="text-accent">Scalable Systems</span>
-                </h3>
+                </h4>
 
-                <div className="d-flex justify-content-center align-items-center flex-wrap">
+                {/* CTA Buttons */}
+                <div className="d-flex justify-content-center align-items-center flex-wrap mb-4">
                     <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger"
                         href="#games-portfolio"
                         style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}
@@ -113,8 +139,17 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             }
                         }}
                     >
-                        VIEW PROJECTS
+                        <i className="fas fa-gamepad me-2"></i> VIEW PROJECTS
                     </a>
+                    {isBotEnabled && (
+                        <button
+                            className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 btn-resume-request"
+                            style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}
+                            onClick={handleResumeRequest}
+                        >
+                            <i className="fas fa-file-alt me-2"></i> REQUEST RESUME
+                        </button>
+                    )}
                     <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger btn-contact-premium"
                         href="#contact"
                         style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}

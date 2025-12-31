@@ -4,13 +4,16 @@ import ReactMarkdown from 'react-markdown';
 import systemPromptRaw from '../data/system_prompt.txt?raw';
 import contextRaw from '../data/chatbotcontext.dat?raw';
 
-const ChatInterface = ({ isOpen, onClose }) => {
+const ChatInterface = ({ isOpen, onClose, initialMessage, onInitialMessageConsumed, initialExpanded = false }) => {
     const [messages, setMessages] = useState([
         { role: 'ai', text: "Greetings! I am nMaD. Ask me anything about Raul's experience." }
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(initialExpanded);
+    const [enableTransition, setEnableTransition] = useState(false);
     const messagesEndRef = useRef(null);
+    const hasProcessedInitialMessage = useRef(false);
 
     // Context loaded at compile time
     const [aiConfig] = useState({
@@ -25,6 +28,34 @@ const ChatInterface = ({ isOpen, onClose }) => {
     useEffect(() => {
         scrollToBottom();
     }, [messages, isOpen]);
+
+    // Sync expanded state with initialExpanded prop when chat opens
+    useEffect(() => {
+        if (isOpen) {
+            setIsExpanded(initialExpanded);
+            setEnableTransition(false); // Disable transition on open
+            // Enable transition after a brief delay so manual toggles are animated
+            const timer = setTimeout(() => setEnableTransition(true), 50);
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen, initialExpanded]);
+
+    // Handle initial message from Resume Request button
+    useEffect(() => {
+        if (isOpen && initialMessage && !hasProcessedInitialMessage.current) {
+            hasProcessedInitialMessage.current = true;
+            // Set the input field with the initial message
+            setInput(initialMessage);
+            // Notify parent that we've consumed the message
+            if (onInitialMessageConsumed) {
+                onInitialMessageConsumed();
+            }
+        }
+        // Reset the flag when chat closes
+        if (!isOpen) {
+            hasProcessedInitialMessage.current = false;
+        }
+    }, [isOpen, initialMessage, onInitialMessageConsumed]);
 
     const handleSend = async (e) => {
         e.preventDefault();
@@ -110,7 +141,7 @@ const ChatInterface = ({ isOpen, onClose }) => {
             position: 'fixed',
             bottom: '20px',
             right: '20px',
-            width: 'min(350px, 90vw)',
+            width: isExpanded ? 'min(66vw, calc(100vw - 40px))' : 'min(350px, 90vw)',
             height: 'min(500px, 80vh)',
             background: 'var(--hero-overlay-solid)',
             backdropFilter: 'blur(10px)',
@@ -120,7 +151,8 @@ const ChatInterface = ({ isOpen, onClose }) => {
             flexDirection: 'column',
             zIndex: 10000,
             boxShadow: '0 0 20px rgba(102, 252, 241, 0.2)',
-            fontFamily: "'Consolas', monospace"
+            fontFamily: "'Consolas', monospace",
+            transition: enableTransition ? 'width 0.3s ease' : 'none'
         }}>
             {/* Header */}
             <div style={{
@@ -137,27 +169,51 @@ const ChatInterface = ({ isOpen, onClose }) => {
                     <div style={{ width: '10px', height: '10px', background: 'var(--accent-cyan)', borderRadius: '50%', marginRight: '10px', boxShadow: '0 0 5px var(--accent-cyan)' }}></div>
                     <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>nMaD_AI_LINK</span>
                 </div>
-                <button
-                    onClick={onClose}
-                    style={{
-                        background: 'rgba(255, 255, 255, 0.1)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        color: 'var(--accent-cyan)',
-                        cursor: 'pointer',
-                        fontSize: '16px',
-                        width: '30px',
-                        height: '30px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: '4px',
-                        transition: 'all 0.2s ease'
-                    }}
-                    onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 0, 80, 0.5)'; e.currentTarget.style.borderColor = '#ff0050'; }}
-                    onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'; }}
-                >
-                    &times;
-                </button>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                    <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        title={isExpanded ? 'Collapse' : 'Expand'}
+                        style={{
+                            background: 'rgba(255, 255, 255, 0.1)',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            color: 'var(--accent-cyan)',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            width: '30px',
+                            height: '30px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: '4px',
+                            transition: 'all 0.2s ease'
+                        }}
+                        onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(102, 252, 241, 0.3)'; e.currentTarget.style.borderColor = 'var(--accent-cyan)'; }}
+                        onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'; }}
+                    >
+                        {isExpanded ? '⇱' : '⇲'}
+                    </button>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            background: 'rgba(255, 255, 255, 0.1)',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            color: 'var(--accent-cyan)',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            width: '30px',
+                            height: '30px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: '4px',
+                            transition: 'all 0.2s ease'
+                        }}
+                        onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 0, 80, 0.5)'; e.currentTarget.style.borderColor = '#ff0050'; }}
+                        onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'; }}
+                    >
+                        &times;
+                    </button>
+                </div>
             </div>
 
             {/* Messages */}
@@ -213,11 +269,11 @@ const ChatInterface = ({ isOpen, onClose }) => {
                 display: 'flex',
                 gap: '10px'
             }}>
-                <input
-                    type="text"
+                <textarea
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Query Protocol..."
+                    rows="2"
                     style={{
                         flex: 1,
                         background: 'var(--bg-void)',
@@ -226,7 +282,15 @@ const ChatInterface = ({ isOpen, onClose }) => {
                         padding: '8px',
                         borderRadius: '4px',
                         outline: 'none',
-                        fontFamily: "'Consolas', monospace"
+                        fontFamily: "'Consolas', monospace",
+                        resize: 'none',
+                        overflowY: 'auto'
+                    }}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            handleSend(e);
+                        }
                     }}
                 />
                 <button type="submit" style={{

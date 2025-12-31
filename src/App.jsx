@@ -34,6 +34,15 @@ function App() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activeCanvas, setActiveCanvas] = useState('featured'); // 'featured' or 'personal'
   const [chatOpen, setChatOpen] = useState(false);
+  const [chatInitialMessage, setChatInitialMessage] = useState('');
+  const [chatShouldExpand, setChatShouldExpand] = useState(false);
+
+  // Handler for opening chat with a pre-filled message (e.g., from Resume Request button)
+  const handleOpenChatWithMessage = (message) => {
+    setChatInitialMessage(message);
+    setChatShouldExpand(true); // Open chat in expanded mode
+    setChatOpen(true);
+  };
 
   useEffect(() => {
     const navbarCollapse = () => {
@@ -66,8 +75,14 @@ function App() {
       {/* NMad AI Companion */}
       {config.enableChat && (
         <>
-          <NMadCompanion onToggleChat={() => setChatOpen(!chatOpen)} />
-          <ChatInterface isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+          <NMadCompanion onToggleChat={() => { setChatInitialMessage(''); setChatShouldExpand(false); setChatOpen(!chatOpen); }} />
+          <ChatInterface
+            isOpen={chatOpen}
+            onClose={() => { setChatOpen(false); setChatInitialMessage(''); setChatShouldExpand(false); }}
+            initialMessage={chatInitialMessage}
+            onInitialMessageConsumed={() => setChatInitialMessage('')}
+            initialExpanded={chatShouldExpand}
+          />
         </>
       )}
 
@@ -145,6 +160,7 @@ function App() {
           onToggleSection={handleSectionToggle}
           isBotEnabled={config.enableChat}
           theme={theme}
+          onOpenChatWithMessage={handleOpenChatWithMessage}
         />
       </header>
 
@@ -154,7 +170,7 @@ function App() {
       </section>
 
       {/* Projects Section (Featured & Personal) */}
-      <ProjectsList activeSection={activeCanvas} onToggleSection={handleSectionToggle} />
+      <ProjectsList activeSection={activeCanvas} onToggleSection={handleSectionToggle} theme={theme} />
 
       {/* Footer */}
       <footer className="footer text-center" id="contact">
