@@ -198,6 +198,45 @@ a:hover {
   color: var(--accent-cyan);
 }
 
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  border: none;
+  background: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn i {
+  transition: all 0.3s ease;
+}
+
+/* Gamepad icon (switch to dark mode) - shown in light mode */
+.theme-toggle-btn .fa-gamepad {
+  color: #a855f7 !important;
+  /* Purple for gaming console vibes */
+  filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.4));
+}
+
+.theme-toggle-btn:hover .fa-gamepad {
+  color: #c084fc !important;
+  /* Lighter purple on hover */
+  transform: scale(1.15) rotate(-10deg);
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+}
+
+/* Lightbulb icon (switch to light mode) - shown in dark mode */
+.theme-toggle-btn .fa-lightbulb {
+  color: #fbbf24 !important;
+  /* Bright yellow for light/illumination */
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.5));
+}
+
+.theme-toggle-btn:hover .fa-lightbulb {
+  color: #fcd34d !important;
+  /* Brighter yellow on hover */
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.7));
+}
+
 
 /* Custom Utilities */
 .text-accent {

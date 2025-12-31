@@ -146,7 +146,7 @@ function App() {
                   title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                   style={{ fontSize: '1.2rem' }}
                 >
-                  <i className={`fas fa-${theme === 'dark' ? 'sun' : 'moon'}`}></i>
+                  <i className={`fas fa-${theme === 'dark' ? 'lightbulb' : 'gamepad'}`}></i>
                 </button>
               </li>
             </ul>
