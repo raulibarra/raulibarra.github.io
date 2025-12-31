@@ -13,7 +13,7 @@
     },
     "rateLimit": {
         "cooldownSeconds": 3,
-        "maxMessagesPerDay": 2,
+        "maxMessagesPerDay": 20,
         "ui": {
             "dailyLimitMessage": "You've reached the daily question limit! For more inquiries, please contact Raul directly at raulibarra.a@gmail.com",
             "cooldownMessage": "Please wait a few seconds before sending another message."
