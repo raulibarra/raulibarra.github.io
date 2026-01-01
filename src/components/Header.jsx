@@ -44,7 +44,12 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
     };
 
     return (
-        <div className="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden" style={{ minHeight: '100vh' }}>
+        <div className="hero-parallax-container d-flex align-items-center justify-content-center position-relative overflow-hidden"
+            style={{
+                minHeight: '100vh',
+                paddingBottom: isBotEnabled ? '10vh' : '0',
+                transition: 'padding-bottom 0.5s ease'
+            }}>
 
             {/* Background Simulation (Absolute to cover full area) */}
 
@@ -65,9 +70,7 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
             {/* Layer 3: Main Content (Foreground) */}
             <div className="text-center position-relative hero-content-wrapper"
                 style={{
-                    zIndex: 10,
-                    marginTop: isBotEnabled ? '-10vh' : '0',
-                    transition: 'margin-top 0.5s ease'
+                    zIndex: 10
                 }}>
 
                 {/* Availability Badge */}
@@ -81,23 +84,26 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                     fontWeight: 800
                 }}>RAUL IBARRA ARANDA</h1>
 
-                <div className="hero-subtitle-container mb-3">
+                <div className="hero-subtitle-container mb-3 d-flex justify-content-center align-items-center flex-nowrap" style={{ gap: 'clamp(0.25rem, 1vw, 0.75rem)' }}>
                     <span className="hero-subtitle text-accent font-code" style={{
                         textShadow: 'var(--hero-sub-shadow)',
                         webkitTextStroke: 'var(--hero-text-outline)',
-                        fontWeight: 700
+                        fontWeight: 700,
+                        whiteSpace: 'nowrap'
                     }}>&lt;Gameplay Programmer /&gt;</span>
-                    <span className="hero-subtitle text-muted mx-2" style={{ fontWeight: 600 }}>|</span>
+                    <span className="hero-subtitle text-muted" style={{ fontWeight: 600 }}>|</span>
                     <span className="hero-subtitle text-white" style={{
                         textShadow: 'var(--hero-sub-shadow)',
                         webkitTextStroke: 'var(--hero-text-outline)',
-                        fontWeight: 600
+                        fontWeight: 600,
+                        whiteSpace: 'nowrap'
                     }}>Full-Stack Developer</span>
-                    <span className="hero-subtitle text-muted mx-2" style={{ fontWeight: 600 }}>|</span>
+                    <span className="hero-subtitle text-muted" style={{ fontWeight: 600 }}>|</span>
                     <span className="hero-subtitle text-accent font-code" style={{
                         textShadow: 'var(--hero-sub-shadow)',
                         webkitTextStroke: 'var(--hero-text-outline)',
-                        fontWeight: 700
+                        fontWeight: 700,
+                        whiteSpace: 'nowrap'
                     }}>AI Specialist</span>
                 </div>
 
@@ -128,10 +134,18 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                 </h4>
 
                 {/* CTA Buttons */}
-                <div className="d-flex justify-content-center align-items-center flex-wrap mb-4">
-                    <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger"
+                <div className="d-flex justify-content-center align-items-center w-100 mb-4" style={{ flexWrap: 'nowrap', gap: '0.75rem' }}>
+                    <a className="btn btn-outline-cyan btn-md font-code js-scroll-trigger d-flex align-items-center justify-content-center"
                         href="#games-portfolio"
-                        style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}
+                        style={{
+                            background: 'var(--hero-overlay-solid)',
+                            backdropFilter: 'blur(4px)',
+                            padding: 'clamp(0.5rem, 1.5vh, 1rem) clamp(0.5rem, 1.5vw, 1.5rem)',
+                            fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
+                            whiteSpace: 'nowrap',
+                            minWidth: 0,
+                            flex: '0 1 auto'
+                        }}
                         onClick={(e) => {
                             e.preventDefault();
                             if (onToggleSection) {
@@ -139,22 +153,38 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             }
                         }}
                     >
-                        <i className="fas fa-gamepad me-2"></i> VIEW PROJECTS
+                        <i className="fas fa-gamepad me-2"></i>_VIEW PROJECTS
                     </a>
                     {isBotEnabled && (
                         <button
-                            className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 btn-resume-request"
-                            style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}
+                            className="btn btn-outline-cyan btn-md font-code d-flex align-items-center justify-content-center btn-resume-request"
+                            style={{
+                                background: 'var(--hero-overlay-solid)',
+                                backdropFilter: 'blur(4px)',
+                                padding: 'clamp(0.5rem, 1.5vh, 1rem) clamp(0.5rem, 1.5vw, 1.5rem)',
+                                fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
+                                whiteSpace: 'nowrap',
+                                minWidth: 0,
+                                flex: '0 1 auto'
+                            }}
                             onClick={handleResumeRequest}
                         >
-                            <i className="fas fa-file-alt me-2"></i> REQUEST RESUME
+                            <i className="fas fa-file-alt me-2"></i>_REQUEST RESUME
                         </button>
                     )}
-                    <a className="btn btn-outline-cyan btn-lg font-code px-4 py-3 mx-2 mb-2 js-scroll-trigger btn-contact-premium"
+                    <a className="btn btn-outline-cyan btn-md font-code js-scroll-trigger btn-contact-premium d-flex align-items-center justify-content-center"
                         href="#contact"
-                        style={{ background: 'var(--hero-overlay-solid)', backdropFilter: 'blur(4px)' }}
+                        style={{
+                            background: 'var(--hero-overlay-solid)',
+                            backdropFilter: 'blur(4px)',
+                            padding: 'clamp(0.5rem, 1.5vh, 1rem) clamp(0.5rem, 1.5vw, 1.5rem)',
+                            fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
+                            whiteSpace: 'nowrap',
+                            minWidth: 0,
+                            flex: '0 1 auto'
+                        }}
                     >
-                        <i className="fas fa-paper-plane me-2"></i> CONTACT ME
+                        <i className="fas fa-paper-plane me-2"></i>_CONTACT ME
                     </a>
                 </div>
 
@@ -203,7 +233,7 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
             </div>
 
             {/* Scroll Down Indicator */}
-            <div className="position-absolute w-100 text-center" style={{ bottom: '30px', zIndex: 10 }}>
+            <div className="hero-scroll-wrapper">
                 <a href="#about" className="text-white js-scroll-trigger scroll-indicator-link">
                     <div className="scroll-indicator"></div>
                     <div className="small mt-2 font-code text-muted" style={{
@@ -212,7 +242,7 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                     }}>SCROLL</div>
                 </a>
             </div>
-        </div>
+        </div >
     );
 };
 
