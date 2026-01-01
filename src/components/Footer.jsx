@@ -20,8 +20,8 @@ const Footer = () => {
 
                 {/* Timezone Info */}
                 <p className="text-white-50 small mb-4">
-                    <i className="fas fa-clock me-2"></i>
-                    Based in Chile (UTC-3) • Experienced working across UTC-8 to UTC+2 timezones
+                    <i className="fas fa-clock"></i>
+                    {' '} Based in Chile (UTC-3) • Experienced working across UTC-8 to UTC+2 timezones
                 </p>
             </div>
 
@@ -37,10 +37,11 @@ const Footer = () => {
                         fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
                         whiteSpace: 'nowrap',
                         minWidth: 0,
-                        flex: '0 1 auto'
+                        flex: '0 1 auto',
+                        gap: '0.5rem'
                     }}
                 >
-                    <i className="fa-solid fa-envelope me-2"></i>_EMAIL ME
+                    <i className="fa-solid fa-envelope"></i>EMAIL ME
                 </a>
                 <a
                     className="btn btn-outline-cyan btn-md font-code d-flex align-items-center justify-content-center"
@@ -54,10 +55,11 @@ const Footer = () => {
                         fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
                         whiteSpace: 'nowrap',
                         minWidth: 0,
-                        flex: '0 1 auto'
+                        flex: '0 1 auto',
+                        gap: '0.5rem'
                     }}
                 >
-                    <i className="fa-brands fa-linkedin me-2"></i>_LINKEDIN
+                    <i className="fa-brands fa-linkedin"></i>LINKEDIN
                 </a>
             </div>
 

@@ -144,7 +144,8 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
                             whiteSpace: 'nowrap',
                             minWidth: 0,
-                            flex: '0 1 auto'
+                            flex: '0 1 auto',
+                            gap: '0.5rem'
                         }}
                         onClick={(e) => {
                             e.preventDefault();
@@ -153,7 +154,7 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             }
                         }}
                     >
-                        <i className="fas fa-gamepad me-2"></i>_VIEW PROJECTS
+                        <i className="fas fa-gamepad"></i>VIEW PROJECTS
                     </a>
                     {isBotEnabled && (
                         <button
@@ -165,11 +166,12 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                                 fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
                                 whiteSpace: 'nowrap',
                                 minWidth: 0,
-                                flex: '0 1 auto'
+                                flex: '0 1 auto',
+                                gap: '0.5rem'
                             }}
                             onClick={handleResumeRequest}
                         >
-                            <i className="fas fa-file-alt me-2"></i>_REQUEST RESUME
+                            <i className="fas fa-file-alt"></i>REQUEST RESUME
                         </button>
                     )}
                     <a className="btn btn-outline-cyan btn-md font-code js-scroll-trigger btn-contact-premium d-flex align-items-center justify-content-center"
@@ -181,10 +183,11 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             fontSize: 'clamp(0.75rem, 1.5vw, 1rem)',
                             whiteSpace: 'nowrap',
                             minWidth: 0,
-                            flex: '0 1 auto'
+                            flex: '0 1 auto',
+                            gap: '0.5rem'
                         }}
                     >
-                        <i className="fas fa-paper-plane me-2"></i>_CONTACT ME
+                        <i className="fas fa-paper-plane"></i>CONTACT ME
                     </a>
                 </div>
 
