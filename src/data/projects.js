@@ -8,7 +8,7 @@ export const featuredProjects = [
         company: "Tomorrow Media / Tevaera",
         teamSize: "5+ including 3 devs",
         tech: ["Unity 6.2", "C#", "Photon Quantum", "ECS", "Addressables"],
-        // Optional: Add quantified metrics/achievements
+        // Metrics: Use descriptive icons to differentiate achievement types
         metrics: [
             { icon: "⚡", value: "8 Players", label: "Multiplayer" },
             { icon: "🌐", value: "WebGL", label: "Platform" }

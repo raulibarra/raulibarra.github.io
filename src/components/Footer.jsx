@@ -21,7 +21,7 @@ const Footer = () => {
                 {/* Timezone Info */}
                 <p className="text-white-50 small mb-4">
                     <i className="fas fa-clock me-2"></i>
-                    Based in Chile (UTC-3) • Flexible with global teams
+                    Based in Chile (UTC-3) • Experienced working across UTC-8 to UTC+2 timezones
                 </p>
             </div>
 
