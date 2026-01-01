@@ -546,7 +546,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: clamp(0.7rem, 2.5vw, 1.25rem);
+  font-size: clamp(0.30rem, 2.5vw, 1.25rem);
   letter-spacing: 0.05rem;
   /* white-space: nowrap handled in inline styles for safety, could be moved here but keeping simple */
 }
