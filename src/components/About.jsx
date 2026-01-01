@@ -50,82 +50,112 @@ const About = () => {
                 <div className="col-lg-8 mr-auto">
                     <h3 className="mb-4 text-white">About me:</h3>
 
-                    {/* Hook Section */}
-                    <div className="info-panel variant-primary">
-                        <p className="lead text-white font-weight-bold" style={{ textAlign: 'justify' }}>
-                            🎮 From AI-driven interactive fiction to multiplayer raid systems serving thousands of players, I
-                            build cutting-edge game experiences that push technical boundaries.
+                    {/* Hook Section - Narrative */}
+                    <div className="info-panel variant-primary mb-4">
+                        <p className="lead text-white font-weight-bold mb-3" style={{ textAlign: 'justify' }}>
+                            I architect complete game ecosystems—from networking backend to polished player UI.
                         </p>
-                        <p className="text-accent mb-0 font-code">
-                            // Tech Lead & Full-Stack Game Developer | AI Integration Specialist
+                        <p className="text-white-50 mb-0" style={{ textAlign: 'justify' }}>
+                            With over 12 years of experience shipping titles for major franchises like <strong>Star Wars</strong>, <strong>DC</strong>, and <strong>Power Rangers</strong>, I specialize in building scalable systems. Whether it's optimizing WebGL rendering, engineering real-time multiplayer networking, or designing adaptive audio systems, I bridge the gap between technical complexity and creative vision.
                         </p>
                     </div>
 
-                    {/* Core Skills Highlight */}
-                    <div className="info-panel variant-surface">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <strong className="text-accent d-block mb-2">🚀 Core Expertise:</strong>
-                                <ul className="list-unstyled mb-0">
-                                    <li>• Game Systems & Integration</li>
-                                    <li>• Full-Stack Development</li>
-                                    <li>• Gameplay Mechanics</li>
-                                    <li>• Multiplayer Systems</li>
-                                </ul>
+                    {/* Core Skills Highlight - Scannable Grid */}
+                    <h5 className="text-white mt-4 mb-3">⚡ Core Competencies</h5>
+                    <div className="info-panel variant-surface mb-4">
+                        <div className="skills-grid">
+                            <div>
+                                <div className="skill-category-title"><i className="fas fa-code"></i> Languages & Core</div>
+                                <div>
+                                    <span className="skill-tag">C# (Expert)</span>
+                                    <span className="skill-tag">C++</span>
+                                    <span className="skill-tag">JavaScript / TypeScript</span>
+                                    <span className="skill-tag">Python</span>
+                                </div>
                             </div>
-                            <div className="col-md-6 mt-3 mt-md-0">
-                                <strong className="text-accent d-block mb-2">🛠️ Tech Stack:</strong>
-                                <ul className="list-unstyled mb-0">
-                                    <li>• Unity3D, Unreal C#, C++</li>
-                                    <li>• Node.js, Python, REST APIs</li>
-                                    <li>• AI Integration, Live-Ops, CI/CD</li>
-                                    <li>• Addressables, Interactive Audio</li>
-                                </ul>
+                            <div>
+                                <div className="skill-category-title"><i className="fas fa-gamepad"></i> Game Engines</div>
+                                <div>
+                                    <span className="skill-tag">Unity3D (Expert)</span>
+                                    <span className="skill-tag">Unreal Engine 5</span>
+                                    <span className="skill-tag">Photon Quantum</span>
+                                    <span className="skill-tag">ECS / DOTS</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="skill-category-title"><i className="fas fa-server"></i> Backend & Services</div>
+                                <div>
+                                    <span className="skill-tag">Node.js</span>
+                                    <span className="skill-tag">REST APIs</span>
+                                    <span className="skill-tag">PlayFab / Firebase</span>
+                                    <span className="skill-tag">Live-Ops</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="skill-category-title"><i className="fas fa-volume-up"></i> Audio & Optimization</div>
+                                <div>
+                                    <span className="skill-tag">Wwise / FMOD</span>
+                                    <span className="skill-tag">MetaSounds</span>
+                                    <span className="skill-tag">Performance Tuning</span>
+                                    <span className="skill-tag">Addressables</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Impact & Experience */}
-                    {/* Impact & Experience */}
-                    <h5 className="text-white mt-4 mb-3">🎯 What I've Built:</h5>
-                    <p style={{ textAlign: 'justify' }}><strong>Multiplayer Systems for Major Franchises</strong>: Engineered the cooperative <strong>Raid Boss
-                        System</strong> for <strong><a href="https://www.youtube.com/watch?v=IZnnAdCXjl4" target="_blank"
-                            rel="noopener noreferrer">DC Legends</a></strong>, introducing real-time multiplayer mechanics
-                        to a turn-based RPG and engaging thousands of daily active players worldwide with complex team-based
-                        combat.</p>
+                    {/* Impact & Experience - Scannable List */}
+                    <h5 className="text-white mt-4 mb-3">🎯 Career Highlights</h5>
+                    <div className="impact-list">
 
-                    <p style={{ textAlign: 'justify' }}><strong>Tutorial & Player Retention Systems</strong>: Built event-driven, adaptive onboarding for
-                        <strong><a href="https://youtu.be/QYcHgdB5_II?si=nc39gHMl6GyArHPd" target="_blank"
-                            rel="noopener noreferrer"> Power Rangers: Morphin Legends</a></strong> and <strong><a
-                                href="https://play.google.com/store/apps/details?id=com.redemptiongames.immortalsgame"
-                                target="_blank" rel="noopener noreferrer">Crushers!</a></strong>, creating intelligent tutorial
-                        systems that respond to player progression and choices, significantly improving retention and reducing
-                        churn.
-                    </p>
+                        {/* Multiplayer Item */}
+                        <div className="impact-item">
+                            <div className="impact-icon">
+                                <i className="fas fa-users"></i>
+                            </div>
+                            <div className="impact-content">
+                                <h6>Multiplayer Systems at Scale</h6>
+                                <p>Engineered real-time features for millions of players. Built the <a href="https://www.youtube.com/watch?v=IZnnAdCXjl4" target="_blank" rel="noopener noreferrer">DC Legends Raid Boss System</a> (synchronous multiplayer in a turn-based RPG) and optimized low-latency networking for <a href="https://tevaera.com/" target="_blank" rel="noopener noreferrer">Degen Rivals</a> using Photon Quantum.</p>
+                            </div>
+                        </div>
 
-                    <p style={{ textAlign: 'justify' }}><strong>Interactive Audio Systems</strong>: Specialized in advanced audio programming across multiple
-                        projects, implementing Wwise & FMOD adaptive audio, MetaSounds in Unreal Engine, spatial audio with
-                        Google Resonance, and dynamic audio transitions that respond to gameplay. Composed original soundtracks
-                        and designed immersive soundscapes for enhanced player experiences.</p>
+                        {/* Optimization Item */}
+                        <div className="impact-item">
+                            <div className="impact-icon">
+                                <i className="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div className="impact-content">
+                                <h6>Performance & Optimization</h6>
+                                <p>Expert in mobile and WebGL optimization. Achieved <strong>35% app size reduction</strong> for <em>Star Wars: Galactic Defense</em> via texture pipeline tools and optimized WebGL rendering for 60fps browser performance.</p>
+                            </div>
+                        </div>
 
-                    <p style={{ textAlign: 'justify' }}><strong>Full-Stack AI-Integrated Titles</strong>: Led development as sole engineer and Tech Lead on 2
-                        shipped interactive fiction games, architecting dynamic chat UI, Ink narrative systems, and Node.js
-                        backend with AI integration for branching storylines. Built scalable asset pipelines handling 700+
-                        assets via Addressables and A/B testing frameworks for data-driven iteration.</p>
+                        {/* Player Retention Item */}
+                        <div className="impact-item">
+                            <div className="impact-icon">
+                                <i className="fas fa-chart-line"></i>
+                            </div>
+                            <div className="impact-content">
+                                <h6>Retention-Driving Mechanics</h6>
+                                <p>Architected adaptive onboarding systems for <a href="https://youtu.be/QYcHgdB5_II?si=nc39gHMl6GyArHPd" target="_blank" rel="noopener noreferrer">Power Rangers: Morphin Legends</a> that analyze player behavior to tailor tutorial flow, significantly reducing early-game churn.</p>
+                            </div>
+                        </div>
 
-                    {/* Teaching & Leadership */}
-                    <h5 className="text-white mt-4 mb-3">📚 Leadership & Mentorship:</h5>
-                    <p style={{ textAlign: 'justify' }}>Led cross-functional teams as <strong>Tech Lead</strong> and sole engineer, mentoring developers on Unity
-                        workflows and CI-friendly practices. As a <strong>Unity3D instructor</strong>, I've helped aspiring
-                        developers achieve industry certifications while promoting scalable technical solutions and rapid
-                        prototyping methodologies.</p>
+                        {/* Audio Item */}
+                        <div className="impact-item">
+                            <div className="impact-icon">
+                                <i className="fas fa-music"></i>
+                            </div>
+                            <div className="impact-content">
+                                <h6>Interaction Audio Engineering</h6>
+                                <p>Specialized in bridging code and sound. Implemented complex adaptive audio systems (Wwise, FMOD, MetaSounds) and spatial audio (Google Resonance). I don't just implement audio; I compose and design complete soundscapes.</p>
+                            </div>
+                        </div>
+
+                    </div>
 
                     {/* Personality Closer */}
-                    <div className="info-panel variant-gold mt-4">
-                        <p className="mb-0" style={{ textAlign: 'justify' }}><strong>💡 My Approach:</strong> I don't just write code: I architect complete game
-                            ecosystems. From multiplayer networked systems to interactive audio, from backend services to
-                            polished player-facing UI, I build versatile technical solutions that scale, adapt, and create
-                            unforgettable experiences.</p>
+                    <div className="info-panel variant-gold mt-5">
+                        <p className="mb-0" style={{ textAlign: 'justify' }}><strong>💡 My Approach:</strong> Technology serves the experience. I write code that is clean, modular, and performant—not just for the machine, but for the team of developers, designers, and artists who work alongside me.</p>
                     </div>
                 </div>
             </div>
