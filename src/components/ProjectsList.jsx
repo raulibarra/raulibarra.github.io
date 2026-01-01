@@ -45,7 +45,7 @@ const PortfolioSection = ({
             </div>
 
             {/* Toggle Link */}
-            <div className="text-center pt-5">
+            <div className="text-center pt-1">
                 <h3>
                     <i className={`bi ${toggleIcon}`}></i> {layout === 'featured' ? 'Check out my featured' : 'Back to'}
                     <a

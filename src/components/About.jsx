@@ -1,6 +1,25 @@
 import React from 'react';
 
-const About = () => {
+const About = ({ onToggleSection }) => {
+    const handleProjectClick = (e, projectSection, projectId) => {
+        e.preventDefault();
+        if (onToggleSection) {
+            onToggleSection(projectSection);
+        }
+        // Scroll to projects section after a brief delay to allow section switch
+        setTimeout(() => {
+            const projectElement = document.getElementById(projectId);
+            if (projectElement) {
+                projectElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // Fallback: scroll to projects section
+                const projectsSection = document.getElementById('games-portfolio');
+                if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }, 100);
+    };
     return (
         <div className="container">
             {/* About Section Content */}
@@ -114,7 +133,7 @@ const About = () => {
                             </div>
                             <div className="impact-content">
                                 <h6>Multiplayer Systems at Scale</h6>
-                                <p>Engineered real-time features for millions of players. Built the <a href="https://www.youtube.com/watch?v=IZnnAdCXjl4" target="_blank" rel="noopener noreferrer">DC Legends Raid Boss System</a> (synchronous multiplayer in a turn-based RPG) and optimized low-latency networking for <a href="https://tevaera.com/" target="_blank" rel="noopener noreferrer">Degen Rivals</a> using Photon Quantum.</p>
+                                <p style={{ textAlign: 'justify' }}>Engineered real-time features for thousands of players. Built the <a href="#dc-legends" onClick={(e) => handleProjectClick(e, 'featured', 'dc-legends')}>DC Legends Raid Boss System</a> (synchronous multiplayer in a turn-based RPG) and optimized low-latency networking for <a href="#degen-rivals" onClick={(e) => handleProjectClick(e, 'featured', 'degen-rivals')}>Degen Rivals</a> using Photon Quantum.</p>
                             </div>
                         </div>
 
@@ -125,7 +144,7 @@ const About = () => {
                             </div>
                             <div className="impact-content">
                                 <h6>Performance & Optimization</h6>
-                                <p>Expert in mobile and WebGL optimization. Achieved <strong>35% app size reduction</strong> for <em>Star Wars: Galactic Defense</em> via texture pipeline tools and optimized WebGL rendering for 60fps browser performance.</p>
+                                <p style={{ textAlign: 'justify' }}>Expert in mobile and WebGL optimization. Achieved <strong>35% app size reduction</strong> for <a href="#starwars-galactic-defense" onClick={(e) => handleProjectClick(e, 'featured', 'starwars-galactic-defense')}>Star Wars: Galactic Defense</a> via texture pipeline tools and optimized WebGL rendering for 60fps browser performance.</p>
                             </div>
                         </div>
 
@@ -136,7 +155,7 @@ const About = () => {
                             </div>
                             <div className="impact-content">
                                 <h6>Retention-Driving Mechanics</h6>
-                                <p>Architected adaptive onboarding systems for <a href="https://youtu.be/QYcHgdB5_II?si=nc39gHMl6GyArHPd" target="_blank" rel="noopener noreferrer">Power Rangers: Morphin Legends</a> that analyze player behavior to tailor tutorial flow, significantly reducing early-game churn.</p>
+                                <p style={{ textAlign: 'justify' }}>Architected adaptive onboarding systems for <a href="#power-rangers" onClick={(e) => handleProjectClick(e, 'featured', 'power-rangers')}>Power Rangers: Morphin Legends</a> that analyze player behavior to tailor tutorial flow, significantly reducing early-game churn.</p>
                             </div>
                         </div>
 
@@ -147,7 +166,7 @@ const About = () => {
                             </div>
                             <div className="impact-content">
                                 <h6>Interaction Audio Engineering</h6>
-                                <p>Specialized in bridging code and sound. Implemented complex adaptive audio systems (Wwise, FMOD, MetaSounds) and spatial audio (Google Resonance). I don't just implement audio; I compose and design complete soundscapes.</p>
+                                <p style={{ textAlign: 'justify' }}>Specialized in bridging code and sound. Implemented complex adaptive audio systems (Wwise, FMOD, MetaSounds) and spatial audio (Google Resonance). I don't just implement audio; I compose and design complete soundscapes.</p>
                             </div>
                         </div>
 

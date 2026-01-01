@@ -33,7 +33,7 @@ const ProjectCard = ({ project, layout, theme }) => {
     const embedSrc = getEmbedSrc();
 
     return (
-        <div className="project-card">
+        <div className="project-card" id={project.id}>
             {/* Header section */}
             <div className="row mb-4 align-items-end">
                 <div className="col-md-6">

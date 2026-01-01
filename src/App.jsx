@@ -166,7 +166,7 @@ function App() {
 
       {/* About Section */}
       <section className="page-section bg-primary text-white mb-0" id="about">
-        <About />
+        <About onToggleSection={handleSectionToggle} />
       </section>
 
       {/* Projects Section (Featured & Personal) */}

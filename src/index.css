@@ -1429,3 +1429,35 @@ a:hover {
 .impact-content a:hover {
   border-bottom-style: solid;
 }
+
+/* Light Theme Support for About Section */
+.light-theme .skill-tag {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #333333;
+}
+
+.light-theme .skill-tag:hover {
+  background: rgba(0, 168, 89, 0.1);
+  border-color: #00a859;
+  color: #00a859;
+}
+
+.light-theme .impact-icon {
+  background: linear-gradient(135deg, rgba(0, 168, 89, 0.1) 0%, rgba(0, 168, 89, 0.05) 100%);
+  border: 1px solid rgba(0, 168, 89, 0.3);
+  color: #00a859;
+}
+
+.light-theme .impact-content h6 {
+  color: #1a1a1a;
+}
+
+.light-theme .impact-content p {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.light-theme .impact-content a {
+  color: #00a859;
+  border-bottom-color: #00a859;
+}
