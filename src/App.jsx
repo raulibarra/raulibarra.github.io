@@ -179,7 +179,7 @@ function App() {
 
       {/* Copyright */}
       <section className="copyright py-4 text-center text-white">
-        <div className="container"><small className="pre-wrap">Copyright © Raul Ibarra Aranda 2025</small></div>
+        <div className="container"><small className="pre-wrap">Copyright © Raul Ibarra Aranda 2026</small></div>
       </section>
 
       {/* Scroll to Top Button (Only visible on small and extra-small screen sizes) */}
