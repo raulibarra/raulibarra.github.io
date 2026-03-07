@@ -64,31 +64,45 @@ const NMadCompanion = ({ onToggleChat }) => {
                 flexDirection: 'column',
                 alignItems: 'center'
             }}>
-                <img
-                    src="./assets/img/nmad_bot.png"
-                    alt="nMaD AI"
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'contain',
-                        filter: 'drop-shadow(0 0 10px var(--accent-cyan))',
-                        transform: 'scaleX(-1)'
-                    }}
-                />
-                <div style={{
-                    marginTop: '-15px',
-                    background: 'var(--hero-overlay-solid)',
-                    color: 'var(--accent-cyan)',
-                    padding: '2px 8px',
-                    borderRadius: '10px',
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    fontFamily: 'Consolas',
-                    border: '1px solid var(--accent-cyan)',
-                    textAlign: 'center',
-                    backdropFilter: 'blur(2px)'
+                <div className="nmad-hover-wrapper" style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
                 }}>
-                    nMaD Bot
+                    <img
+                        src="./assets/img/nmad_bot.png"
+                        alt="nMaD AI"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'contain',
+                            filter: 'drop-shadow(0 0 10px var(--accent-cyan))',
+                            transform: 'scaleX(-1)'
+                        }}
+                    />
+                    <div style={{
+                        marginTop: '-15px',
+                        background: 'var(--hero-overlay-solid)',
+                        color: 'var(--accent-cyan)',
+                        padding: '4px 14px',
+                        borderRadius: '20px',
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+                        fontFamily: 'Consolas',
+                        border: '1px solid var(--accent-cyan)',
+                        textAlign: 'center',
+                        backdropFilter: 'blur(4px)',
+                        boxShadow: '0 0 15px rgba(102, 252, 241, 0.3)',
+                        animation: 'pulse 2s infinite ease-in-out',
+                        whiteSpace: 'nowrap',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                    }}>
+                        Chat with<br></br> nMaD
+                    </div>
                 </div>
             </div>
 
@@ -97,6 +111,17 @@ const NMadCompanion = ({ onToggleChat }) => {
                     0% { transform: translateY(0px); }
                     50% { transform: translateY(-15px); }
                     100% { transform: translateY(0px); }
+                }
+                @keyframes pulse {
+                    0% { box-shadow: 0 0 0 0 rgba(102, 252, 241, 0.4); }
+                    70% { box-shadow: 0 0 0 10px rgba(102, 252, 241, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(102, 252, 241, 0); }
+                }
+                .nmad-container:hover .nmad-hover-wrapper {
+                    transform: scale(1.15);
+                }
+                .nmad-container:hover img {
+                    filter: drop-shadow(0 0 20px var(--accent-cyan)) !important;
                 }
             `}</style>
         </div>
