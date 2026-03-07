@@ -149,6 +149,9 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                         }}
                         onClick={(e) => {
                             e.preventDefault();
+                            import('../services/analytics').then(({ analyticsService }) => {
+                                analyticsService.trackEvent('cta_click', { button: 'view_projects' });
+                            });
                             if (onToggleSection) {
                                 onToggleSection('featured');
                             }
@@ -169,7 +172,12 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                                 flex: '0 1 auto',
                                 gap: '0.5rem'
                             }}
-                            onClick={handleResumeRequest}
+                            onClick={() => {
+                                import('../services/analytics').then(({ analyticsService }) => {
+                                    analyticsService.trackEvent('cta_click', { button: 'request_resume' });
+                                });
+                                handleResumeRequest();
+                            }}
                         >
                             <i className="fas fa-file-alt"></i>REQUEST RESUME
                         </button>
@@ -185,6 +193,11 @@ const Header = ({ onToggleSection, isBotEnabled, theme, onOpenChatWithMessage })
                             minWidth: 0,
                             flex: '0 1 auto',
                             gap: '0.5rem'
+                        }}
+                        onClick={() => {
+                            import('../services/analytics').then(({ analyticsService }) => {
+                                analyticsService.trackEvent('cta_click', { button: 'contact_me' });
+                            });
                         }}
                     >
                         <i className="fas fa-paper-plane"></i>CONTACT ME

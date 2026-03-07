@@ -112,6 +112,9 @@ function App() {
                   href="#games-portfolio"
                   onClick={(e) => {
                     e.preventDefault();
+                    import('./services/analytics').then(({ analyticsService }) => {
+                      analyticsService.trackEvent('nav_click', { section: 'featured' });
+                    });
                     handleSectionToggle('featured');
                     setIsNavExpanded(false);
                   }}
@@ -125,6 +128,9 @@ function App() {
                   href="#personal_projects"
                   onClick={(e) => {
                     e.preventDefault();
+                    import('./services/analytics').then(({ analyticsService }) => {
+                      analyticsService.trackEvent('nav_click', { section: 'personal' });
+                    });
                     handleSectionToggle('personal');
                     setIsNavExpanded(false);
                   }}
@@ -133,11 +139,20 @@ function App() {
                 </a>
               </li>
               <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact" onClick={() => setIsNavExpanded(false)}>CONTACT</a>
+                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact" onClick={() => {
+                  import('./services/analytics').then(({ analyticsService }) => {
+                    analyticsService.trackEvent('nav_click', { section: 'contact' });
+                  });
+                  setIsNavExpanded(false);
+                }}>CONTACT</a>
               </li>
               <li className="nav-item mx-0 mx-lg-1 d-flex align-items-center">
                 <button
                   onClick={() => {
+                    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+                    import('./services/analytics').then(({ analyticsService }) => {
+                      analyticsService.trackEvent('theme_toggle', { theme: nextTheme });
+                    });
                     toggleTheme();
                     setIsNavExpanded(false);
                   }}

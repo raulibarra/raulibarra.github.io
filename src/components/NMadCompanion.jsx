@@ -36,7 +36,14 @@ const NMadCompanion = ({ onToggleChat }) => {
 
     return (
         <div
-            onClick={onToggleChat}
+            onClick={(e) => {
+                import('../services/analytics').then(({ analyticsService }) => {
+                    analyticsService.trackEvent('bot_click', {
+                        action: 'open_chat'
+                    });
+                });
+                onToggleChat(e);
+            }}
             style={{
                 position: 'fixed',
                 width: '120px',

@@ -43,13 +43,22 @@
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' 'unsafe-inline' https://js.puter.com https://cdn.jsdelivr.net;
+    script-src 'self' 'unsafe-inline' https://js.puter.com https://cdn.jsdelivr.net https://www.googletagmanager.com;
     style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net https://fonts.googleapis.com;
     font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.gstatic.com;
-    img-src 'self' data: https:;
-    connect-src 'self' https://api.puter.com wss://api.puter.com https://*.puter.io wss://*.puter.io https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://generativelanguage.googleapis.com;
+    img-src 'self' data: https: https://www.google-analytics.com https://www.googletagmanager.com;
+    connect-src 'self' https://api.puter.com wss://api.puter.com https://*.puter.io wss://*.puter.io https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdnjs.cloudflare.com https://generativelanguage.googleapis.com https://www.google-analytics.com https://stats.g.doubleclick.net;
     frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://itch.io https://*.itch.io https://*.itch.zone;
   ">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSJLJVJRLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KSJLJVJRLW');
+  </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -57,7 +66,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Structured Data (JSON-LD) -->

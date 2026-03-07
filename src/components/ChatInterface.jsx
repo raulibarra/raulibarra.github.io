@@ -78,6 +78,13 @@ const ChatInterface = ({ isOpen, onClose, initialMessage, onInitialMessageConsum
 
         const userMsgText = input;
 
+        // Track the question in analytics
+        const { analyticsService } = await import('../services/analytics');
+        analyticsService.trackEvent('ai_query', {
+            question: userMsgText,
+            source: 'chat_interface'
+        });
+
         // Update UI: Add User Message + Empty AI Placeholder immediately
         setMessages(prev => [
             ...prev,
